@@ -7,7 +7,7 @@ Snapshot: September 16, 2026. Done requires verified acceptance evidence. AWS de
 | Issue | Priority | Milestone | Status | Dependencies |
 |---|---|---|---|---|
 | [#1 Requirements traceability and acceptance checklist](https://github.com/elijah020201/treasury-label-review/issues/1) | P0 | Requirements and architecture | Done | None |
-| [#2 Repository setup and CI](https://github.com/elijah020201/treasury-label-review/issues/2) | P0 | Requirements and architecture | In Review | 1 |
+| [#2 Repository setup and CI](https://github.com/elijah020201/treasury-label-review/issues/2) | P0 | Requirements and architecture | Done | 1 |
 | [#3 AWS infrastructure as code](https://github.com/elijah020201/treasury-label-review/issues/3) | P0 | AWS deployment | In Review | 2 |
 | [#4 Input schema and application-data form](https://github.com/elijah020201/treasury-label-review/issues/4) | P0 | Working end-to-end review | Done | 2 |
 | [#5 Label upload validation and image handling](https://github.com/elijah020201/treasury-label-review/issues/5) | P0 | Working end-to-end review | Done | 2 |

@@ -15,3 +15,5 @@ Eleven generated fictional PNG labels: complete, wrong ABV, inconsistent proof, 
 Pending deployment approval. No live accuracy, false-match rate, p50/p95 latency, cold-start timing or per-label measured cost is claimed yet. `npm run evaluate` will write the complete results, including failures, to `docs/evaluation/results.json`. Timing excludes queue wait at the server; the batch UI reports queue wait separately. First request is not assumed cold without CloudWatch evidence.
 
 Exact field extraction compares the six observed fields with known fixture text. False-match denominators include intentionally wrong/missing/conflicting findings; false-mismatch denominators include expected matching findings. Needs-review rates exclude the always-manual formatting finding and domestic origin. Small sample sizes must accompany all rates. Processing p50/p95 use uncached successful calls only; failed-call durations remain in the raw report.
+
+GitHub CI also passed on Linux: https://github.com/elijah020201/treasury-label-review/actions/runs/35065024868 . Dependency audit: zero known vulnerabilities at the checkpoint.
