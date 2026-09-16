@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "complete.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  }
+]
