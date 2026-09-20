@@ -1,4 +1,4 @@
-import { chromium } from "@playwright/test";
+import { chromium, expect } from "@playwright/test";
 import {
   GetSecretValueCommand,
   SecretsManagerClient,
@@ -51,6 +51,8 @@ async function review() {
   await page
     .getByRole("heading", { name: "Review findings", exact: true })
     .waitFor({ timeout: 35000 });
+  // Let the app's delayed results scroll finish before composing a closer shot.
+  await pause(500);
 }
 async function stage(index, fn) {
   const began = Date.now();
@@ -105,6 +107,8 @@ await stage(3, async () => {
   await row.scrollIntoViewIfNeeded();
   if (!(await row.innerText()).includes("Mismatch"))
     throw new Error("Expected altered warning discrepancy was not shown.");
+  await pause(500);
+  await expect(row).toBeInViewport({ ratio: 1 });
 });
 await stage(4, async () => {
   await page.getByRole("button", { name: "Batch review", exact: true }).click();

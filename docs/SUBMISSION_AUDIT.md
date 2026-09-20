@@ -31,9 +31,10 @@ Machine-readable results are in [verification.json](evaluation/verification.json
 - Landing and live-review views: axe WCAG 2 A/AA and 2.1 AA scans reported zero violations at 1440px and 390px. Landing pages had no horizontal overflow; desktop/mobile screenshots were visually inspected.
 - Tab navigation reached the primary links, and Enter opened the workbench. This focused check and axe do not replace a full assistive-technology audit.
 - Observed browser network requests used only labels.altrosstudios.games. AI calls occur on the server.
-- The video is 126.01 seconds, 1920×1080, 25 fps, H.264/AAC, approximately 8.5 MB. It contains actual deployed workflows with fictional images and synthesized Matthew narration from Amazon Polly.
+- The video is 126.01 seconds, 1920×1080, 25 fps, H.264/AAC, approximately 9.1 MB. It contains actual deployed workflows with fictional images and synthesized Matthew narration from Amazon Polly.
 - Six chapter frames were visually inspected. FFmpeg decoded the complete video/audio without errors, found no black intervals over 0.5 seconds, and measured mean audio −16.7 dB and peak −1.2 dB. Narration durations fit within their chapters. This verifies the encoded audio and script alignment; no human listening review is claimed.
 - Public playback and seeking worked at 25 and 110 seconds, and English caption cues loaded. Poster, transcript and downloadable MP4 are served with the site. Authentication preparation is outside the published footage.
+- Final media inspection caught the application's delayed scroll overriding the warning close-up. The recording now waits for that scroll and asserts the full warning row remains in the viewport. The re-recorded warning chapter visibly shows the wording mismatch, heading match and manual formatting finding together.
 
 ## Evaluation and source access
 
