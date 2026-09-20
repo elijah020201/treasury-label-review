@@ -13,6 +13,22 @@ function findings(ex: Extraction, confidence = 99) {
   return compare(sampleExpected, ex, lines);
 }
 describe("field comparison", () => {
+  it("accepts corroborated ABV and proof split into complementary observations", () => {
+    const ex = clone();
+    ex.fields.alcohol.values = ["45% Alc./Vol.", "90 Proof"];
+    expect(findings(ex).find((f) => f.field === "alcohol")?.status).toBe(
+      "Match",
+    );
+    ex.fields.alcohol.values = ["45% Alc./Vol.", "80 Proof"];
+    expect(findings(ex).find((f) => f.field === "alcohol")?.status).toBe(
+      "Needs review",
+    );
+    expect(
+      compare(sampleExpected, ex, [
+        { text: "45% Alc./Vol.", confidence: 99 },
+      ]).find((f) => f.field === "alcohol")?.status,
+    ).toBe("Needs review");
+  });
   it("accepts ordinary capitalization and curly apostrophe differences", () =>
     expect(findings(clone()).find((x) => x.field === "brand")?.status).toBe(
       "Match",

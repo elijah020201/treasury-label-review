@@ -8,7 +8,10 @@ const context = await browser.newContext({
 const page = await context.newPage();
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
-await page.goto(process.env.APP_URL || "http://127.0.0.1:5173/");
+await page.goto(
+  (process.env.APP_URL || "http://127.0.0.1:5173").replace(/\/$/, "") +
+    "/workbench",
+);
 await page.getByRole("button", { name: "View example", exact: true }).click();
 await page.getByRole("heading", { name: "Review findings" }).waitFor();
 await page

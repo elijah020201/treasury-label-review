@@ -13,6 +13,7 @@ import { sampleExpected, example } from "./sample";
 import { runQueue, RequestError, type QueueState } from "./queue";
 import { csv, download } from "./export";
 import "./style.css";
+import { Landing } from "./Landing";
 const empty: Expected = {
   brand: "",
   classType: "",
@@ -228,6 +229,7 @@ function App() {
     [queue, setQueue] = useState<QueueState<Review>[]>([]),
     [batchBusy, setBatchBusy] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
+  const sampleRequest = useRef(0);
   useEffect(() => {
     if (!file) {
       setPreview("");
@@ -248,22 +250,24 @@ function App() {
     return () => window.removeEventListener("beforeunload", warn);
   }, [busy, batchBusy]);
   function replace(f?: File) {
+    sampleRequest.current++;
     setFile(f);
     setReview(undefined);
     setRegions([]);
     setError("");
   }
   async function loadSample(showExample = false) {
+    const request = ++sampleRequest.current;
     try {
       const r = await fetch("/samples/complete.png");
       if (!r.ok) throw new Error("Sample could not be loaded.");
-      replace(
-        new File([await r.blob()], "complete.png", { type: "image/png" }),
-      );
+      const blob = await r.blob();
+      if (request !== sampleRequest.current) return;
+      replace(new File([blob], "complete.png", { type: "image/png" }));
       setExpected({ ...sampleExpected });
       if (showExample) setReview(example());
     } catch (e) {
-      setError(String(e));
+      if (request === sampleRequest.current) setError(String(e));
     }
   }
   async function authenticate(e: React.FormEvent) {
@@ -811,6 +815,6 @@ function App() {
 }
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    {window.location.pathname.startsWith("/workbench") ? <App /> : <Landing />}
   </React.StrictMode>,
 );

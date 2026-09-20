@@ -1,5 +1,5 @@
 import { z } from "zod";
-export const VERSION = "2026-09-16.1";
+export const VERSION = "2026-09-20.2";
 export const fields = [
   "brand",
   "classType",

@@ -82,8 +82,8 @@ export async function unlock(pk: string, lease: string) {
 }
 export async function quota(session: string) {
   const day = new Date().toISOString().slice(0, 10);
-  const keys: [string, number, number][] = [
-    ["quota:lifetime", 2000, now() + 366 * 86400],
+  const keys: [string, number, number | null][] = [
+    ["quota:lifetime", 2000, null],
     [`quota:day:${day}`, 1000, now() + 172800],
     [`quota:session:${session}`, 500, now() + 86400],
   ];
@@ -94,11 +94,14 @@ export async function quota(session: string) {
           Update: {
             TableName,
             Key: { pk },
-            UpdateExpression: "SET expires = :expires ADD #n :one",
+            UpdateExpression:
+              expires === null
+                ? "ADD #n :one"
+                : "SET expires = :expires ADD #n :one",
             ConditionExpression: "attribute_not_exists(#n) OR #n < :limit",
             ExpressionAttributeNames: { "#n": "count" },
             ExpressionAttributeValues: {
-              ":expires": expires,
+              ...(expires === null ? {} : { ":expires": expires }),
               ":one": 1,
               ":limit": limit,
             },
@@ -107,12 +110,27 @@ export async function quota(session: string) {
       }),
     );
   } catch (e) {
-    if (e instanceof Error && e.name === "TransactionCanceledException")
+    if (e instanceof Error && e.name === "TransactionCanceledException") {
+      const reasons =
+        "CancellationReasons" in e && Array.isArray(e.CancellationReasons)
+          ? e.CancellationReasons
+          : [];
+      if (
+        !reasons.some(
+          (r: { Code?: string }) => r.Code === "ConditionalCheckFailed",
+        )
+      )
+        throw new RequestError(
+          "Another review is updating the queue. Retry shortly.",
+          true,
+          503,
+        );
       throw new RequestError(
         "The live review allowance has been reached. Contact the prototype owner.",
         false,
         429,
       );
+    }
     throw e;
   }
 }

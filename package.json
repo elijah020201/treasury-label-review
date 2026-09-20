@@ -12,7 +12,7 @@
     "check": "npm run typecheck && npm test && npm run build && npm run synth",
     "synth": "cdk synth",
     "deploy": "cdk deploy",
-    "fixtures": "tsx scripts/fixtures.ts",
+    "fixtures": "tsx scripts/fixtures.ts && tsx scripts/fixtures-diverse.ts",
     "evaluate": "tsx scripts/evaluate.ts"
   },
   "dependencies": {

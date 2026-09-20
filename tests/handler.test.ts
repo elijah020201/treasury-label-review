@@ -158,3 +158,13 @@ it("exposes timeout as failure, releases lease, never saves canned output", asyn
   expect(mocked.unlock).toHaveBeenCalledOnce();
   expect(mocked.save).not.toHaveBeenCalled();
 });
+it("requests a clearer image when model output violates the extraction contract", async () => {
+  mocked.extract.mockRejectedValue(
+    Object.assign(new Error("untrusted raw text"), { name: "ZodError" }),
+  );
+  const r = await handler(event({ expected: sampleExpected, image }));
+  expect(r.statusCode).toBe(422);
+  expect(r.body).toContain("clearer, complete label image");
+  expect(r.body).not.toContain("untrusted raw text");
+  expect(mocked.save).not.toHaveBeenCalled();
+});

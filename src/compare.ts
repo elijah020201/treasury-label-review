@@ -13,6 +13,11 @@ export const WARNING =
 export const space = (s: string) => s.replace(/\s+/gu, " ").trim();
 export const normalize = (s: string) =>
   space(s.normalize("NFKC").replace(/[‘’ʼ]/gu, "'")).toLocaleLowerCase("en-US");
+export const normalizeOrigin = (s: string) =>
+  normalize(s).replace(
+    /^(?:product of|made in|produced in|country of origin\s*:)\s+/,
+    "",
+  );
 export function alcohol(s: string): number | null {
   const abvs = [...s.matchAll(/(\d+(?:\.\d+)?)\s*%/g)].map((m) => Number(m[1]));
   const proofs = [...s.matchAll(/(\d+(?:\.\d+)?)\s*proof\b/gi)].map(
@@ -62,7 +67,12 @@ export function compare(
   const result: Finding[] = fields.map((field) => {
     const obs = ex.fields[field],
       value = obs.values.join(" | "),
-      ev = evidence(value, lines);
+      parts = obs.values.map((v) => evidence(v, lines)),
+      ev = {
+        supported: parts.length > 0 && parts.every((p) => p.supported),
+        low: parts.some((p) => p.low),
+        regions: parts.flatMap((p) => p.regions),
+      };
     let status: Status = "Needs review",
       reason = "Review the extracted text against the image.";
     let normalized = normalize(value);
@@ -77,7 +87,7 @@ export function compare(
       reason = obs.uncertain
         ? "Image evidence is unreadable or uncertain; supply a clearer image."
         : "No value was extracted. Confirm the complete label was supplied.";
-    } else if (obs.values.length > 1) {
+    } else if (obs.values.length > 1 && field !== "alcohol") {
       reason =
         "Multiple values were extracted; select the relevant label panel and verify manually.";
     } else if (obs.uncertain || !ev.supported || ev.low) {
@@ -104,8 +114,10 @@ export function compare(
             : "Numeric values differ from the application.";
       }
     } else {
+      const canonical = field === "origin" ? normalizeOrigin : normalize;
+      normalized = canonical(value);
       status =
-        normalize(expected[field]) === normalize(value) ? "Match" : "Mismatch";
+        canonical(expected[field]) === canonical(value) ? "Match" : "Mismatch";
       reason =
         status === "Match"
           ? "Text agrees after Unicode, case, apostrophe and whitespace normalization."

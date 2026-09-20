@@ -87,21 +87,24 @@ let correct = 0,
   contentFindings = 0;
 for (const item of results) {
   if (!item.review) continue;
+  const expected = cases.find((c) => c.name === item.name)!.expected;
   for (const field of fields) {
     const gold =
       field === "origin"
-        ? ""
+        ? item.name === "import-origin-omitted"
+          ? ""
+          : expected.origin
         : field === "brand"
           ? item.name === "unseen-brand"
             ? "ORCHARD CREEK"
-            : "STONE’S THROW"
+            : expected.brand
           : field === "alcohol"
             ? item.name === "wrong-abv"
               ? "40% Alc./Vol. (80 Proof)"
               : item.name === "inconsistent-proof"
                 ? "45% Alc./Vol. (80 Proof)"
-                : sampleExpected.alcohol
-            : sampleExpected[field];
+                : expected.alcohol
+            : expected[field];
     const actual = item.review.findings.find((f) => f.field === field)!;
     total++;
     if (
@@ -111,7 +114,8 @@ for (const item of results) {
       correct++;
   }
   for (const f of item.review.findings.filter(
-    (f) => f.field !== "formatting" && f.field !== "origin",
+    (f) =>
+      f.field !== "formatting" && (f.field !== "origin" || expected.imported),
   )) {
     contentFindings++;
     if (f.status === "Needs review") needsReview++;
@@ -122,8 +126,9 @@ for (const item of results) {
       (item.name === "heading-case" &&
         ["warning", "heading"].includes(f.field));
     const missing =
-      item.name === "missing-warning" &&
-      ["warning", "heading"].includes(f.field);
+      (item.name === "missing-warning" &&
+        ["warning", "heading"].includes(f.field)) ||
+      (item.name === "import-origin-omitted" && f.field === "origin");
     const conflict =
       item.name === "inconsistent-proof" && f.field === "alcohol";
     if (mismatch || missing || conflict) {

@@ -1,4 +1,4 @@
-# Delivery plan — September 16, 2026
+# Delivery plan — September 16; updated September 20, 2026
 
 Assessment received September 15; provisional deadline September 22. Target reviewable delivery before September 21.
 Official assignment: https://github.com/treasurytakehome-rgb/instructions
@@ -8,6 +8,8 @@ Assignment revision read in full: 62bd63cd2f6b5af088b1d3c3b039c48cfcb012ef.
 
 At the initial check, main Codex weekly usage was 94%; reset September 20 at 15:17 EDT. No reset credits. Spark and Luna reserve buckets reported 0% used; their selectability was not established. Elijah explicitly chose continued implementation on the current model.
 Keep one implementation thread, batch independent reads, use focused tests, and record decisions for continuation. Percent remaining is not a token or task estimate. Preserve verification effort; trim enhancements before correctness.
+
+September 20 update: the main allowance reset and implementation continued on the same model. The owner requested the deployed app, a demo at labels.altrosstudios.games and a narrated video. The small AWS stack, demo site and video are deployed; the 14-case live evaluation, 45 deterministic tests and fresh-session audit are complete. The repository and project board are public. Human review remains required before actual submission.
 
 ## Implementation sequence
 
@@ -23,16 +25,16 @@ Keep one implementation thread, batch independent reads, use focused tests, and 
 ## Proposed architecture
 
 React/TypeScript on private S3 through CloudFront; same-origin /api through API Gateway HTTP API to one Lambda; private temporary image bucket; DynamoDB for idempotent results and atomic quotas; Bedrock Nova Lite and Textract on server; CloudWatch logs; Secrets Manager for a generated reviewer access code. CDK TypeScript defines resources.
-No NAT, VPC, provisioned model throughput, custom domain, or permanent compute. SQS is deferred because a bounded browser queue meets the prototype workflow with less infrastructure. The browser must remain open; unfinished items can be retried.
+No NAT, VPC, provisioned model throughput or permanent compute. The September 20 extension adds DNS and an ACM certificate for the existing Altros domain. SQS is deferred because a bounded browser queue meets the prototype workflow with less infrastructure. The browser must remain open; unfinished items can be retried.
 
 ## Access and limits proposed
 
 Public static sample; shared reviewer code establishes a signed, HttpOnly cookie for live processing. Secrets are never placed in frontend assets. Same-origin requests, no third-party browser resources. 2 MB input, JPEG/PNG only, maximum 20 megapixels, 300 batch items, concurrency 2, short timeouts and one retry for transient errors. Global daily inference allowance and per-session allowance enforced atomically before paid calls. Unrestricted public inference is deliberately not the access model.
-AWS identity verified in account 170787022014, us-east-1; existing CDK bootstrap found. Model catalog lists amazon.nova-lite-v1:0 as ACTIVE. Invocation access, actual quotas, latency, cost and extraction quality remain unverified until approved live checks.
+AWS identity verified in account 170787022014, us-east-1; existing CDK bootstrap reused. Nova Lite invocation and Textract processing are verified. EVALUATION.md records latency, cost estimates and quality, including a failed blurred-image case.
 
 ## Visual direction
 
-Palette: ink #17324d, paper #f6f8fb, white #ffffff, action blue #175cd3, amber #8a4b08, green #176544. System Segoe UI body with Georgia only for the fictional bottle label. A workbench, not a marketing landing page: left-aligned task title; image and input form in two columns; findings table below. Status has text and an icon. On narrow screens the workflow becomes a single column. The distinctive element is the large inspectable label and evidence, with minimal decoration.
+Palette: ink #17324d, paper #f6f8fb, white #ffffff, action blue #175cd3, amber #8a4b08, green #176544. System Segoe UI body with Georgia only for the fictional bottle label. The workbench has a left-aligned task title, image and input form in two columns, and findings below. Status has text and an icon. On narrow screens the workflow becomes a single column. The separate demo landing page uses actual app imagery, a narrated walkthrough and links into the workbench.
 
 ## Acceptance gates
 

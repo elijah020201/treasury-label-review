@@ -209,6 +209,13 @@ export async function handler(
         retryable: e.retryable,
         requestId,
       });
+    if (name === "ZodError" || name === "SyntaxError")
+      return response(422, {
+        error:
+          "This image could not be transcribed reliably. Replace it with a clearer, complete label image.",
+        retryable: false,
+        requestId,
+      });
     const transient = [
       "ThrottlingException",
       "ServiceUnavailableException",

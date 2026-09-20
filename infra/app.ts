@@ -15,6 +15,9 @@ import {
   aws_apigatewayv2 as apigw,
   aws_apigatewayv2_integrations as integrations,
   aws_s3_deployment as deployment,
+  aws_certificatemanager as acm,
+  aws_route53 as route53,
+  aws_route53_targets as targets,
 } from "aws-cdk-lib";
 import { existsSync } from "node:fs";
 if (!existsSync("dist/index.html") || !existsSync("dist-server/handler.cjs"))
@@ -128,12 +131,32 @@ const policy = new cf.ResponseHeadersPolicy(stack, "SecurityHeaders", {
   },
 });
 const distribution = new cf.Distribution(stack, "Web", {
+  domainNames: ["labels.altrosstudios.games"],
+  certificate: new acm.Certificate(stack, "Certificate", {
+    domainName: "labels.altrosstudios.games",
+    validation: acm.CertificateValidation.fromDns(
+      route53.HostedZone.fromHostedZoneAttributes(stack, "Zone", {
+        hostedZoneId: "Z07519233F8GPJ1X6LH6H",
+        zoneName: "altrosstudios.games",
+      }),
+    ),
+  }),
   defaultRootObject: "index.html",
   priceClass: cf.PriceClass.PRICE_CLASS_100,
   defaultBehavior: {
     origin: origins.S3BucketOrigin.withOriginAccessControl(site),
     viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
     responseHeadersPolicy: policy,
+    functionAssociations: [
+      {
+        eventType: cf.FunctionEventType.VIEWER_REQUEST,
+        function: new cf.Function(stack, "AppRoutes", {
+          code: cf.FunctionCode.fromInline(
+            "function handler(event) { var r = event.request; if (r.uri === '/workbench' || r.uri === '/workbench/') r.uri = '/index.html'; return r; }",
+          ),
+        }),
+      },
+    ],
   },
   additionalBehaviors: {
     "/api/*": {
@@ -148,6 +171,24 @@ const distribution = new cf.Distribution(stack, "Web", {
     },
   },
 });
+const zone = route53.HostedZone.fromHostedZoneAttributes(stack, "RecordZone", {
+  hostedZoneId: "Z07519233F8GPJ1X6LH6H",
+  zoneName: "altrosstudios.games",
+});
+new route53.ARecord(stack, "DomainA", {
+  zone,
+  recordName: "labels",
+  target: route53.RecordTarget.fromAlias(
+    new targets.CloudFrontTarget(distribution),
+  ),
+});
+new route53.AaaaRecord(stack, "DomainAAAA", {
+  zone,
+  recordName: "labels",
+  target: route53.RecordTarget.fromAlias(
+    new targets.CloudFrontTarget(distribution),
+  ),
+});
 new deployment.BucketDeployment(stack, "Publish", {
   sources: [deployment.Source.asset("dist")],
   destinationBucket: site,
@@ -155,8 +196,13 @@ new deployment.BucketDeployment(stack, "Publish", {
   distributionPaths: ["/*"],
 });
 new CfnOutput(stack, "ApplicationUrl", {
+  value: "https://labels.altrosstudios.games",
+});
+new CfnOutput(stack, "CloudFrontUrl", {
   value: `https://${distribution.distributionDomainName}`,
 });
+new CfnOutput(stack, "SiteBucket", { value: site.bucketName });
+new CfnOutput(stack, "DistributionId", { value: distribution.distributionId });
 new CfnOutput(stack, "ReviewerSecretArn", { value: access.secretArn });
 new CfnOutput(stack, "ApiFunction", { value: fn.functionName });
 new CfnOutput(stack, "ImagesBucket", { value: images.bucketName });

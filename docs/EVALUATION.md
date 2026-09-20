@@ -1,19 +1,35 @@
-# Evaluation
+# Evaluation — September 20, 2026
 
-## Verified local results
+## Final extraction pipeline
 
-September 16, 2026: 39 deterministic tests passed, strict TypeScript passed, production build and CDK synthesis passed. Desktop and 390-pixel mobile browser checks passed with no JavaScript page errors or page-wide overflow. Axe WCAG 2 A/AA and 2.1 AA rules found zero violations on the checked views. These automated checks do not prove complete accessibility.
+Pipeline 2026-09-20.2: Textract transcript, Nova Lite image-plus-transcript extraction, strict schema validation, field-specific deterministic comparisons, OCR-sourced warning lines and conservative evidence checks. Raw results are in [results.json](evaluation/results.json). The [initial run](evaluation/initial-run.json) is retained; observed misses drove the documented changes. Both runs used the same 14 synthetic cases.
 
-The queue simulation processes 300 items at concurrency two: 299 succeed, one permanent failure remains isolated, and a transient failure succeeds on its second attempt. A separate test confirms timeout retries stop after two attempts. This is simulated queue behavior, not 300 paid model calls.
+| Measure | Observed result |
+|---|---|
+| Live requests | 14 |
+| Completed / failed | 13 / 1 |
+| Server processing p50 / p95 | 2,880 / 4,617 ms (13 successful, uncached requests) |
+| Client request p50 / p95 | 3,002 / 4,717 ms (same 13 requests) |
+| Exact normalized field text | 77 / 78 fields in successful requests (98.7%) |
+| False matches | 0 / 9 intentionally nonmatching findings |
+| False mismatches | 0 / 84 expected matching findings |
+| Needs-review content findings | 1 / 93; excludes formatting and domestic origin |
+| AI/OCR estimate for this run | $0.02347, excluding Lambda/network/storage and unreported model tokens from the failed request |
 
-## Dataset
+The one exact-text difference was “Product of France” versus “France”; the origin comparison correctly normalized that boilerplate. Extraction accuracy excludes the failed request and is not 98.7% coverage of all submitted images. Every successful review also contains a mandatory manual formatting check. The 1/93 rate must not be interpreted as the fraction of labels requiring no human review.
 
-Eleven generated fictional PNG labels: complete, wrong ABV, inconsistent proof, altered warning, title-case heading, absent warning, injection-like text, unseen alternative brand, 90-degree rotation, low resolution, and glare. The source generator and manifest are checked in. These share a single layout, so results cannot establish broad real-world label accuracy. Deterministic tests additionally cover units, origin omission, missing expected input, producer differences, multiple values, unreadable evidence and invalid uploads.
+The five-second target was met by the 13 successful observed requests, including the rotated case. This is a small warm-session sample, not a latency guarantee or a production load test. Login invokes Lambda first. CloudWatch reported cold initialization of approximately 515 and 590 ms on observed authentication invocations; a separate cold end-to-end extraction distribution was not measured.
 
-## Live measurements
+## Failure and limitations
 
-Pending deployment approval. No live accuracy, false-match rate, p50/p95 latency, cold-start timing or per-label measured cost is claimed yet. `npm run evaluate` will write the complete results, including failures, to `docs/evaluation/results.json`. Timing excludes queue wait at the server; the batch UI reports queue wait separately. First request is not assumed cold without CloudWatch evidence.
+The deliberately downscaled/blurred image produced model output that violated the extraction schema. It returned a failure after 2,507 ms; no canned result was substituted. A subsequent error-message improvement returns an actionable 422 requesting a clearer complete image rather than a generic 502. This presentation change does not erase the recorded failure.
 
-Exact field extraction compares the six observed fields with known fixture text. False-match denominators include intentionally wrong/missing/conflicting findings; false-mismatch denominators include expected matching findings. Needs-review rates exclude the always-manual formatting finding and domestic origin. Small sample sizes must accompany all rates. Processing p50/p95 use uncached successful calls only; failed-call durations remain in the raw report.
+The dataset contains 14 fictional PNGs over three layouts: spirits, imported wine and beer. Cases cover correct content, wrong ABV, inconsistent proof, altered/missing/title-case warning, prompt-injection-like text, another brand, 90-degree rotation, low resolution, glare, wine origin and omitted import origin. Images are generated from source, not real bottle photographs. The findings cannot establish real-world accuracy across arbitrary packaging, glare, fonts, languages or regulatory exceptions. The prompt-injection result is one test case, not a security proof.
 
-GitHub CI also passed on Linux: https://github.com/elijah020201/treasury-label-review/actions/runs/35065024868 . Dependency audit: zero known vulnerabilities at the checkpoint.
+The initial pipeline completed 14/14 but missed several class/type values and produced two false mismatches. Feeding OCR into extraction and normalizing explicit country statements improved those cases, with roughly 0.9 seconds added median processing time. Initial and final failures remain public in the raw reports.
+
+## Automated and browser verification
+
+45 deterministic tests cover comparison, warning selection, upload decoding, authentication, cache behavior, quota-before-inference ordering, sanitized errors and bounded queue behavior. The 300-item queue simulation yields 299 successes and one permanent failure; a transient item retries once, and concurrency never exceeds two. This is not 300 paid model calls. Separate deployed browser checks verify a small actual batch.
+
+Desktop/mobile browser checks and axe results are recorded in the submission audit. Automated accessibility checks do not establish complete accessibility. Physical font weight, print size, contrast and layout remain human checks even when warning wording matches.

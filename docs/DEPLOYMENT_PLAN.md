@@ -1,6 +1,6 @@
 # Deployment proposal
 
-Prepared September 16, 2026. Approval pending; no project resources provisioned yet.
+Prepared September 16, 2026. On September 20 Elijah instructed completion of the submission-ready app, an Altros-domain demo site, and a demo video. This authorizes executing this previously presented small deployment plan. The additional domain uses an ACM certificate and DNS records for labels.altrosstudios.games in the existing hosted zone; no domain purchase. A short Polly narration adds only a few cents. The same $10 initial planning allowance applies.
 
 ## Target and exact resources
 
@@ -8,7 +8,7 @@ Prepared September 16, 2026. Approval pending; no project resources provisioned 
 - One CloudFormation stack, `TreasuryLabelReview`, defined in `infra/app.ts`.
 - One CloudFront distribution; two private S3 buckets (site and temporary images); one API Gateway HTTP API; one 1-GB Node.js Lambda (28-second timeout, reserved concurrency 4); one on-demand DynamoDB table; one generated Secrets Manager secret; CloudWatch log group retained seven days.
 - CDK adds deployment/cleanup helper Lambda functions and IAM roles. Existing CDK bootstrap is reused.
-- Server-side Nova Lite on-demand (`amazon.nova-lite-v1:0`, regional endpoint) and Textract `DetectDocumentText` per live review. No model endpoint, provisioned capacity, NAT, custom domain or always-on compute.
+- Server-side Nova Lite on-demand (`amazon.nova-lite-v1:0`, regional endpoint) and Textract `DetectDocumentText` per live review. Existing-domain DNS and an ACM certificate serve labels.altrosstudios.games. No model endpoint, provisioned capacity, NAT or always-on compute.
 
 ## Low-volume estimate
 
@@ -36,6 +36,10 @@ Images expire through a one-day S3 lifecycle; actual deletion is asynchronous. R
 
 From the repository, run `npx cdk destroy TreasuryLabelReview` after reviewer access is no longer needed. The stack's destroy policies remove the table, buckets and objects, distribution, API, Lambda and logs. Secrets Manager may retain the secret through its recovery window; verify deletion and remove it through the normal AWS recovery policy. Existing shared CDK bootstrap is not removed. Check the stack and billing afterward. Teardown destroys saved prototype reviews.
 
-## Approval requested
+## Authorization
 
-Approve this stack and up to 25 live evaluation requests under the $10 first-month planning budget. Actual invocation access and end-to-end quality remain unverified until the approved smoke test runs. This approval does not authorize submitting the assessment or contacting Treasury.
+The September 20 completion request authorized this concrete stack under the $10 first-month planning allowance. Invocation access, deployment and small live evaluations subsequently succeeded; see EVALUATION.md for measured outcomes and failures. This does not authorize submitting the assessment or contacting Treasury.
+
+## Execution update (September 20)
+
+The first live 14-image run exposed extraction defects. A second 14-image run verified fixes, preserving the initial report. Together with smoke, recording and verification requests, this exceeds the original provisional 25-call estimate but remains well within the unchanged $10 planning allowance. No bulk paid queue benchmark was performed.
