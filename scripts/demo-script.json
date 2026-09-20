@@ -1,0 +1,32 @@
+[
+  {
+    "title": "1. Start with the label",
+    "caption": "Fictional artwork. Application data entered separately.",
+    "text": "Label Review Workbench helps a reviewer compare alcohol label artwork with application information. This is the actual application, using fictional labels. Start by loading a sample or uploading a new image, then enter what the application says. The image is read independently of those expected values."
+  },
+  {
+    "title": "2. Run a real review",
+    "caption": "Live AWS extraction, followed by deterministic comparisons.",
+    "text": "Select Review label to run real server-side extraction. A vision model transcribes the artwork, and optical character recognition checks the supporting text. The workbench then applies explicit comparison rules. Each finding shows the expected value, the observed value, and a reason. The processing time shown here is measured for this request."
+  },
+  {
+    "title": "3. Make a discrepancy visible",
+    "caption": "Changing the application value produces a new comparison.",
+    "text": "Suppose the application says forty percent alcohol, while the label shows forty-five percent and ninety proof. Change the expected value and review again. The alcohol finding identifies a mismatch. Ordinary brand capitalization and apostrophe differences can still match, while conflicting alcohol and proof values require a closer look."
+  },
+  {
+    "title": "4. Check the warning carefully",
+    "caption": "Exact warning text. Separate checks for case and formatting.",
+    "text": "The government warning receives a stricter check. This fictional label changes the required wording, and the workbench flags the difference. Heading capitalization is checked separately. Font weight, physical print size, contrast, and placement still need human inspection. A content match never means the label has received regulatory approval."
+  },
+  {
+    "title": "5. Work through a batch",
+    "caption": "Two concurrent requests. Independent results and exports.",
+    "text": "For a batch, select the label images and a JSON manifest that supplies the expected information for each file. The queue supports up to three hundred items, with two requests running at a time. Each result is independent, and transient retries are bounded. Keep the tab open, then export the summary and findings."
+  },
+  {
+    "title": "6. Keep the evidence",
+    "caption": "Inspectable results. Documented measurements and limitations.",
+    "text": "Reviewers can download JSON and CSV results, including reasons and observed text. The repository explains the AWS architecture, test coverage, measured evaluation, and remaining limitations. Temporary storage and request allowances bound this prototype. AI assists the comparison; a human reviewer remains responsible for the decision."
+  }
+]

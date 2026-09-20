@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.481
+Label Review Workbench helps a reviewer compare alcohol label artwork with application information.
+
+00:00:05.481 --> 00:00:08.525
+This is the actual application, using fictional labels.
+
+00:00:08.525 --> 00:00:13.452
+Start by loading a sample or uploading a new image, then enter what the application says.
+
+00:00:13.452 --> 00:00:16.608
+The image is read independently of those expected values.
+
+00:00:19.000 --> 00:00:22.147
+Select Review label to run real server-side extraction.
+
+00:00:22.147 --> 00:00:27.926
+A vision model transcribes the artwork, and optical character recognition checks the supporting text.
+
+00:00:27.926 --> 00:00:30.959
+The workbench then applies explicit comparison rules.
+
+00:00:30.959 --> 00:00:35.079
+Each finding shows the expected value, the observed value, and a reason.
+
+00:00:35.079 --> 00:00:38.512
+The processing time shown here is measured for this request.
+
+00:00:41.000 --> 00:00:47.086
+Suppose the application says forty percent alcohol, while the label shows forty-five percent and ninety proof.
+
+00:00:47.086 --> 00:00:49.465
+Change the expected value and review again.
+
+00:00:49.465 --> 00:00:51.789
+The alcohol finding identifies a mismatch.
+
+00:00:51.789 --> 00:00:59.480
+Ordinary brand capitalization and apostrophe differences can still match, while conflicting alcohol and proof values require a closer look.
+
+00:01:02.000 --> 00:01:04.704
+The government warning receives a stricter check.
+
+00:01:04.704 --> 00:01:09.670
+This fictional label changes the required wording, and the workbench flags the difference.
+
+00:01:09.670 --> 00:01:12.153
+Heading capitalization is checked separately.
+
+00:01:12.153 --> 00:01:16.898
+Font weight, physical print size, contrast, and placement still need human inspection.
+
+00:01:16.898 --> 00:01:20.816
+A content match never means the label has received regulatory approval.
+
+00:01:23.000 --> 00:01:29.183
+For a batch, select the label images and a JSON manifest that supplies the expected information for each file.
+
+00:01:29.183 --> 00:01:33.792
+The queue supports up to three hundred items, with two requests running at a time.
+
+00:01:33.792 --> 00:01:37.276
+Each result is independent, and transient retries are bounded.
+
+00:01:37.276 --> 00:01:40.424
+Keep the tab open, then export the summary and findings.
+
+00:01:43.000 --> 00:01:48.018
+Reviewers can download JSON and CSV results, including reasons and observed text.
+
+00:01:48.018 --> 00:01:54.709
+The repository explains the AWS architecture, test coverage, measured evaluation, and remaining limitations.
+
+00:01:54.709 --> 00:01:58.550
+Temporary storage and request allowances bound this prototype.
+
+00:01:58.550 --> 00:02:03.568
+AI assists the comparison; a human reviewer remains responsible for the decision.

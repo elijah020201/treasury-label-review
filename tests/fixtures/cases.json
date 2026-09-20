@@ -1,0 +1,184 @@
+[
+  {
+    "name": "complete",
+    "file": "public/samples/complete.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "wrong-abv",
+    "file": "public/samples/wrong-abv.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "inconsistent-proof",
+    "file": "public/samples/inconsistent-proof.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "altered-warning",
+    "file": "public/samples/altered-warning.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "heading-case",
+    "file": "public/samples/heading-case.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "missing-warning",
+    "file": "public/samples/missing-warning.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "injection",
+    "file": "public/samples/injection.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "unseen-brand",
+    "file": "public/samples/unseen-brand.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "rotated",
+    "file": "public/samples/rotated.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "low-resolution",
+    "file": "public/samples/low-resolution.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "glare",
+    "file": "public/samples/glare.png",
+    "expected": {
+      "brand": "Stone's Throw",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcohol": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+      "origin": "",
+      "imported": false
+    }
+  },
+  {
+    "name": "imported-wine",
+    "file": "public/samples/imported-wine.png",
+    "expected": {
+      "brand": "RIVIÈRE",
+      "classType": "Chardonnay",
+      "alcohol": "12.5% Alc./Vol.",
+      "netContents": "750 mL",
+      "producer": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+      "origin": "France",
+      "imported": true
+    }
+  },
+  {
+    "name": "import-origin-omitted",
+    "file": "public/samples/import-origin-omitted.png",
+    "expected": {
+      "brand": "RIVIÈRE",
+      "classType": "Chardonnay",
+      "alcohol": "12.5% Alc./Vol.",
+      "netContents": "750 mL",
+      "producer": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+      "origin": "France",
+      "imported": true
+    }
+  },
+  {
+    "name": "beer-portrait",
+    "file": "public/samples/beer-portrait.png",
+    "expected": {
+      "brand": "NORTH PIER",
+      "classType": "India Pale Ale",
+      "alcohol": "6.2% ABV",
+      "netContents": "355 mL",
+      "producer": "North Pier Brewing, 24 Harbor Road, Portland, ME",
+      "origin": "",
+      "imported": false
+    }
+  }
+]

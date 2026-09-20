@@ -1,0 +1,3556 @@
+{
+  "summary": {
+    "runAt": "2026-09-20T21:17:02.301Z",
+    "samples": 14,
+    "successful": 14,
+    "failed": 0,
+    "uncachedLatencySamples": 14,
+    "processingP50Ms": 2008,
+    "processingP95Ms": 2460,
+    "fieldExactExtraction": {
+      "correct": 65,
+      "total": 84,
+      "rate": 0.7738095238095238
+    },
+    "falseMatch": {
+      "count": 0,
+      "denominator": 9
+    },
+    "falseMismatch": {
+      "count": 2,
+      "denominator": 91
+    },
+    "needsReview": {
+      "count": 7,
+      "denominator": 100
+    },
+    "tokens": {
+      "input": 25167,
+      "output": 3830
+    },
+    "estimatedAiOcrCostUsd": 0.02342922
+  },
+  "results": [
+    {
+      "name": "complete",
+      "requestMs": 2450,
+      "review": {
+        "id": "b98968b43b8a8cca7afea6e1ddbf84ef54ff5515d8cc5fdf10ed11b0fd91deeb",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:33.344Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18945613503456116,
+                "top": 0.22663664817810059,
+                "width": 0.6265435814857483,
+                "height": 0.06894637644290924
+              },
+              {
+                "left": 0.2524697780609131,
+                "top": 0.5538594126701355,
+                "width": 0.4963594675064087,
+                "height": 0.025194866582751274
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.3022438883781433,
+                "top": 0.3355218470096588,
+                "width": 0.3976384997367859,
+                "height": 0.03151839226484299
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.35643091797828674,
+                "top": 0.4331776201725006,
+                "width": 0.286723256111145,
+                "height": 0.03482530266046524
+              },
+              {
+                "left": 0.35643091797828674,
+                "top": 0.4331776201725006,
+                "width": 0.286723256111145,
+                "height": 0.03482530266046524
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4567655324935913,
+                "top": 0.48953190445899963,
+                "width": 0.08709120750427246,
+                "height": 0.02587573602795601
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18945613503456116,
+                "top": 0.22663664817810059,
+                "width": 0.6265435814857483,
+                "height": 0.06894637644290924
+              },
+              {
+                "left": 0.2524697780609131,
+                "top": 0.5538594126701355,
+                "width": 0.4963594675064087,
+                "height": 0.025194866582751274
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.06848344951868057,
+                "top": 0.6766462326049805,
+                "width": 0.2505287826061249,
+                "height": 0.020050663501024246
+              },
+              {
+                "left": 0.06904023885726929,
+                "top": 0.7173470258712769,
+                "width": 0.7344141602516174,
+                "height": 0.025525202974677086
+              },
+              {
+                "left": 0.06844526529312134,
+                "top": 0.7537133097648621,
+                "width": 0.7291806936264038,
+                "height": 0.025782736018300056
+              },
+              {
+                "left": 0.06886139512062073,
+                "top": 0.7902669906616211,
+                "width": 0.7248384952545166,
+                "height": 0.025209220126271248
+              },
+              {
+                "left": 0.06876087933778763,
+                "top": 0.8266931176185608,
+                "width": 0.14623625576496124,
+                "height": 0.024799467995762825
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.06848344951868057,
+                "top": 0.6766462326049805,
+                "width": 0.2505287826061249,
+                "height": 0.020050663501024246
+              },
+              {
+                "left": 0.06904023885726929,
+                "top": 0.7173470258712769,
+                "width": 0.7344141602516174,
+                "height": 0.025525202974677086
+              },
+              {
+                "left": 0.06844526529312134,
+                "top": 0.7537133097648621,
+                "width": 0.7291806936264038,
+                "height": 0.025782736018300056
+              },
+              {
+                "left": 0.06886139512062073,
+                "top": 0.7902669906616211,
+                "width": 0.7248384952545166,
+                "height": 0.025209220126271248
+              },
+              {
+                "left": 0.06876087933778763,
+                "top": 0.8266931176185608,
+                "width": 0.14623625576496124,
+                "height": 0.024799467995762825
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.06848344951868057,
+                "top": 0.6766462326049805,
+                "width": 0.2505287826061249,
+                "height": 0.020050663501024246
+              },
+              {
+                "left": 0.06904023885726929,
+                "top": 0.7173470258712769,
+                "width": 0.7344141602516174,
+                "height": 0.025525202974677086
+              },
+              {
+                "left": 0.06844526529312134,
+                "top": 0.7537133097648621,
+                "width": 0.7291806936264038,
+                "height": 0.025782736018300056
+              },
+              {
+                "left": 0.06886139512062073,
+                "top": 0.7902669906616211,
+                "width": 0.7248384952545166,
+                "height": 0.025209220126271248
+              },
+              {
+                "left": 0.06876087933778763,
+                "top": 0.8266931176185608,
+                "width": 0.14623625576496124,
+                "height": 0.024799467995762825
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2238,
+          "extractionMs": 2003
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "wrong-abv",
+      "requestMs": 2147,
+      "review": {
+        "id": "46cd584ceb1508f73d6b9fb90ff4bb768a5fb482e0f6c17eb228ca648d28c53a",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:35.481Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18943867087364197,
+                "top": 0.22664684057235718,
+                "width": 0.6266530156135559,
+                "height": 0.06907303631305695
+              },
+              {
+                "left": 0.2524799704551697,
+                "top": 0.5538548231124878,
+                "width": 0.4963579773902893,
+                "height": 0.02520362101495266
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.30230966210365295,
+                "top": 0.33550357818603516,
+                "width": 0.39764222502708435,
+                "height": 0.03156391531229019
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "40% Alc./Vol. | (80 Proof)",
+            "normalized": "40% ABV",
+            "status": "Mismatch",
+            "evidence": "40% Alc./Vol. | (80 Proof)",
+            "reason": "Numeric values differ from the application.",
+            "regions": [
+              {
+                "left": 0.35630202293395996,
+                "top": 0.4328342378139496,
+                "width": 0.2867770195007324,
+                "height": 0.03497999161481857
+              },
+              {
+                "left": 0.35630202293395996,
+                "top": 0.4328342378139496,
+                "width": 0.2867770195007324,
+                "height": 0.03497999161481857
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4570043385028839,
+                "top": 0.4894414246082306,
+                "width": 0.08686333894729614,
+                "height": 0.02598712593317032
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18943867087364197,
+                "top": 0.22664684057235718,
+                "width": 0.6266530156135559,
+                "height": 0.06907303631305695
+              },
+              {
+                "left": 0.2524799704551697,
+                "top": 0.5538548231124878,
+                "width": 0.4963579773902893,
+                "height": 0.02520362101495266
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.0684918463230133,
+                "top": 0.6766364574432373,
+                "width": 0.2504623830318451,
+                "height": 0.020120594650506973
+              },
+              {
+                "left": 0.06905383616685867,
+                "top": 0.7173692584037781,
+                "width": 0.7344508171081543,
+                "height": 0.025483084842562675
+              },
+              {
+                "left": 0.06843315064907074,
+                "top": 0.7537096738815308,
+                "width": 0.7293674945831299,
+                "height": 0.0257360078394413
+              },
+              {
+                "left": 0.06884846091270447,
+                "top": 0.7902185320854187,
+                "width": 0.7248448729515076,
+                "height": 0.0253337062895298
+              },
+              {
+                "left": 0.06876618415117264,
+                "top": 0.8266987800598145,
+                "width": 0.14625155925750732,
+                "height": 0.0248473659157753
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.0684918463230133,
+                "top": 0.6766364574432373,
+                "width": 0.2504623830318451,
+                "height": 0.020120594650506973
+              },
+              {
+                "left": 0.06905383616685867,
+                "top": 0.7173692584037781,
+                "width": 0.7344508171081543,
+                "height": 0.025483084842562675
+              },
+              {
+                "left": 0.06843315064907074,
+                "top": 0.7537096738815308,
+                "width": 0.7293674945831299,
+                "height": 0.0257360078394413
+              },
+              {
+                "left": 0.06884846091270447,
+                "top": 0.7902185320854187,
+                "width": 0.7248448729515076,
+                "height": 0.0253337062895298
+              },
+              {
+                "left": 0.06876618415117264,
+                "top": 0.8266987800598145,
+                "width": 0.14625155925750732,
+                "height": 0.0248473659157753
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.0684918463230133,
+                "top": 0.6766364574432373,
+                "width": 0.2504623830318451,
+                "height": 0.020120594650506973
+              },
+              {
+                "left": 0.06905383616685867,
+                "top": 0.7173692584037781,
+                "width": 0.7344508171081543,
+                "height": 0.025483084842562675
+              },
+              {
+                "left": 0.06843315064907074,
+                "top": 0.7537096738815308,
+                "width": 0.7293674945831299,
+                "height": 0.0257360078394413
+              },
+              {
+                "left": 0.06884846091270447,
+                "top": 0.7902185320854187,
+                "width": 0.7248448729515076,
+                "height": 0.0253337062895298
+              },
+              {
+                "left": 0.06876618415117264,
+                "top": 0.8266987800598145,
+                "width": 0.14625155925750732,
+                "height": 0.0248473659157753
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2008,
+          "extractionMs": 1845
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "inconsistent-proof",
+      "requestMs": 2284,
+      "review": {
+        "id": "a822bf4238922dadebcf07798abe5da8c414a68be2efb26079c0c550f8bba2e4",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:37.793Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18948468565940857,
+                "top": 0.22658291459083557,
+                "width": 0.6271331906318665,
+                "height": 0.06910032033920288
+              },
+              {
+                "left": 0.25243428349494934,
+                "top": 0.5538144111633301,
+                "width": 0.49642640352249146,
+                "height": 0.025274666026234627
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.3022707998752594,
+                "top": 0.3354690968990326,
+                "width": 0.39765024185180664,
+                "height": 0.03161512687802315
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | (80 Proof)",
+            "normalized": "Unresolved",
+            "status": "Needs review",
+            "evidence": "45% Alc./Vol. | (80 Proof)",
+            "reason": "ABV/proof is missing, conflicting, or not parseable. Verify both values.",
+            "regions": [
+              {
+                "left": 0.3563198745250702,
+                "top": 0.4331352412700653,
+                "width": 0.28692981600761414,
+                "height": 0.0348576195538044
+              },
+              {
+                "left": 0.3563198745250702,
+                "top": 0.4331352412700653,
+                "width": 0.28692981600761414,
+                "height": 0.0348576195538044
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4567897319793701,
+                "top": 0.48949334025382996,
+                "width": 0.08722329884767532,
+                "height": 0.02580087073147297
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18948468565940857,
+                "top": 0.22658291459083557,
+                "width": 0.6271331906318665,
+                "height": 0.06910032033920288
+              },
+              {
+                "left": 0.25243428349494934,
+                "top": 0.5538144111633301,
+                "width": 0.49642640352249146,
+                "height": 0.025274666026234627
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.0685502141714096,
+                "top": 0.6765629053115845,
+                "width": 0.25046512484550476,
+                "height": 0.02003132924437523
+              },
+              {
+                "left": 0.06904658675193787,
+                "top": 0.7173306345939636,
+                "width": 0.7344540357589722,
+                "height": 0.025576401501893997
+              },
+              {
+                "left": 0.06845241039991379,
+                "top": 0.7537424564361572,
+                "width": 0.7290881276130676,
+                "height": 0.025742460042238235
+              },
+              {
+                "left": 0.06886940449476242,
+                "top": 0.7903517484664917,
+                "width": 0.724782407283783,
+                "height": 0.025135012343525887
+              },
+              {
+                "left": 0.06877538561820984,
+                "top": 0.8266909718513489,
+                "width": 0.14627555012702942,
+                "height": 0.024829788133502007
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.0685502141714096,
+                "top": 0.6765629053115845,
+                "width": 0.25046512484550476,
+                "height": 0.02003132924437523
+              },
+              {
+                "left": 0.06904658675193787,
+                "top": 0.7173306345939636,
+                "width": 0.7344540357589722,
+                "height": 0.025576401501893997
+              },
+              {
+                "left": 0.06845241039991379,
+                "top": 0.7537424564361572,
+                "width": 0.7290881276130676,
+                "height": 0.025742460042238235
+              },
+              {
+                "left": 0.06886940449476242,
+                "top": 0.7903517484664917,
+                "width": 0.724782407283783,
+                "height": 0.025135012343525887
+              },
+              {
+                "left": 0.06877538561820984,
+                "top": 0.8266909718513489,
+                "width": 0.14627555012702942,
+                "height": 0.024829788133502007
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.0685502141714096,
+                "top": 0.6765629053115845,
+                "width": 0.25046512484550476,
+                "height": 0.02003132924437523
+              },
+              {
+                "left": 0.06904658675193787,
+                "top": 0.7173306345939636,
+                "width": 0.7344540357589722,
+                "height": 0.025576401501893997
+              },
+              {
+                "left": 0.06845241039991379,
+                "top": 0.7537424564361572,
+                "width": 0.7290881276130676,
+                "height": 0.025742460042238235
+              },
+              {
+                "left": 0.06886940449476242,
+                "top": 0.7903517484664917,
+                "width": 0.724782407283783,
+                "height": 0.025135012343525887
+              },
+              {
+                "left": 0.06877538561820984,
+                "top": 0.8266909718513489,
+                "width": 0.14627555012702942,
+                "height": 0.024829788133502007
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2139,
+          "extractionMs": 1974
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "altered-warning",
+      "requestMs": 2226,
+      "review": {
+        "id": "2467a018de1639b24907d12126e2c059494ff1aa5bfe4f419fb6ba5a4868d6a8",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:40.020Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18926182389259338,
+                "top": 0.22660966217517853,
+                "width": 0.6268947720527649,
+                "height": 0.06904004514217377
+              },
+              {
+                "left": 0.2524178922176361,
+                "top": 0.5538727641105652,
+                "width": 0.49640339612960815,
+                "height": 0.0252438485622406
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.30231213569641113,
+                "top": 0.33544206619262695,
+                "width": 0.3976484537124634,
+                "height": 0.03162797912955284
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.35636651515960693,
+                "top": 0.4331149160861969,
+                "width": 0.28687000274658203,
+                "height": 0.034849222749471664
+              },
+              {
+                "left": 0.35636651515960693,
+                "top": 0.4331149160861969,
+                "width": 0.28687000274658203,
+                "height": 0.034849222749471664
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4569200277328491,
+                "top": 0.4895560145378113,
+                "width": 0.0869676023721695,
+                "height": 0.025813065469264984
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18926182389259338,
+                "top": 0.22660966217517853,
+                "width": 0.6268947720527649,
+                "height": 0.06904004514217377
+              },
+              {
+                "left": 0.2524178922176361,
+                "top": 0.5538727641105652,
+                "width": 0.49640339612960815,
+                "height": 0.0252438485622406
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of minor discomfort. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Mismatch",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of minor discomfort. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.0685441717505455,
+                "top": 0.6767194867134094,
+                "width": 0.2504531145095825,
+                "height": 0.019882308319211006
+              },
+              {
+                "left": 0.06901679188013077,
+                "top": 0.717326819896698,
+                "width": 0.7348955869674683,
+                "height": 0.025634784251451492
+              },
+              {
+                "left": 0.06842038780450821,
+                "top": 0.7536954879760742,
+                "width": 0.6859726905822754,
+                "height": 0.025824185460805893
+              },
+              {
+                "left": 0.0686308741569519,
+                "top": 0.7902657389640808,
+                "width": 0.7053840160369873,
+                "height": 0.025263888761401176
+              },
+              {
+                "left": 0.06888824701309204,
+                "top": 0.8266767263412476,
+                "width": 0.24859100580215454,
+                "height": 0.02484014444053173
+              }
+            ],
+            "reason": "Warning differs from required wording, punctuation or capitalization."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.0685441717505455,
+                "top": 0.6767194867134094,
+                "width": 0.2504531145095825,
+                "height": 0.019882308319211006
+              },
+              {
+                "left": 0.06901679188013077,
+                "top": 0.717326819896698,
+                "width": 0.7348955869674683,
+                "height": 0.025634784251451492
+              },
+              {
+                "left": 0.06842038780450821,
+                "top": 0.7536954879760742,
+                "width": 0.6859726905822754,
+                "height": 0.025824185460805893
+              },
+              {
+                "left": 0.0686308741569519,
+                "top": 0.7902657389640808,
+                "width": 0.7053840160369873,
+                "height": 0.025263888761401176
+              },
+              {
+                "left": 0.06888824701309204,
+                "top": 0.8266767263412476,
+                "width": 0.24859100580215454,
+                "height": 0.02484014444053173
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.0685441717505455,
+                "top": 0.6767194867134094,
+                "width": 0.2504531145095825,
+                "height": 0.019882308319211006
+              },
+              {
+                "left": 0.06901679188013077,
+                "top": 0.717326819896698,
+                "width": 0.7348955869674683,
+                "height": 0.025634784251451492
+              },
+              {
+                "left": 0.06842038780450821,
+                "top": 0.7536954879760742,
+                "width": 0.6859726905822754,
+                "height": 0.025824185460805893
+              },
+              {
+                "left": 0.0686308741569519,
+                "top": 0.7902657389640808,
+                "width": 0.7053840160369873,
+                "height": 0.025263888761401176
+              },
+              {
+                "left": 0.06888824701309204,
+                "top": 0.8266767263412476,
+                "width": 0.24859100580215454,
+                "height": 0.02484014444053173
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2026,
+          "extractionMs": 1915
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "heading-case",
+      "requestMs": 2075,
+      "review": {
+        "id": "35a09f54f6695b99b20b1bc0be2f15edf2819e50bb175b2497c082d56232712a",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:42.097Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18943803012371063,
+                "top": 0.22663567960262299,
+                "width": 0.6268109083175659,
+                "height": 0.06891435384750366
+              },
+              {
+                "left": 0.25242167711257935,
+                "top": 0.5538591146469116,
+                "width": 0.4964478015899658,
+                "height": 0.02518552541732788
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.3563990890979767,
+                "top": 0.4331423342227936,
+                "width": 0.2866927683353424,
+                "height": 0.03478004038333893
+              },
+              {
+                "left": 0.3563990890979767,
+                "top": 0.4331423342227936,
+                "width": 0.2866927683353424,
+                "height": 0.03478004038333893
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4566754400730133,
+                "top": 0.48951631784439087,
+                "width": 0.08711596578359604,
+                "height": 0.02588510327041149
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18943803012371063,
+                "top": 0.22663567960262299,
+                "width": 0.6268109083175659,
+                "height": 0.06891435384750366
+              },
+              {
+                "left": 0.25242167711257935,
+                "top": 0.5538591146469116,
+                "width": 0.4964478015899658,
+                "height": 0.02518552541732788
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "Government Warning: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Mismatch",
+            "evidence": "Government Warning: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.06848330050706863,
+                "top": 0.6764479875564575,
+                "width": 0.2078445702791214,
+                "height": 0.02543894201517105
+              },
+              {
+                "left": 0.06904270499944687,
+                "top": 0.7173190116882324,
+                "width": 0.7344545722007751,
+                "height": 0.025548148900270462
+              },
+              {
+                "left": 0.06843791902065277,
+                "top": 0.7537875771522522,
+                "width": 0.7291179299354553,
+                "height": 0.02563936449587345
+              },
+              {
+                "left": 0.06885985285043716,
+                "top": 0.7903808951377869,
+                "width": 0.724790096282959,
+                "height": 0.025114357471466064
+              },
+              {
+                "left": 0.06875959038734436,
+                "top": 0.8266969323158264,
+                "width": 0.1462680995464325,
+                "height": 0.024863243103027344
+              }
+            ],
+            "reason": "Warning differs from required wording, punctuation or capitalization."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "Government Warning:",
+            "status": "Mismatch",
+            "evidence": "Government Warning:",
+            "regions": [
+              {
+                "left": 0.06848330050706863,
+                "top": 0.6764479875564575,
+                "width": 0.2078445702791214,
+                "height": 0.02543894201517105
+              },
+              {
+                "left": 0.06904270499944687,
+                "top": 0.7173190116882324,
+                "width": 0.7344545722007751,
+                "height": 0.025548148900270462
+              },
+              {
+                "left": 0.06843791902065277,
+                "top": 0.7537875771522522,
+                "width": 0.7291179299354553,
+                "height": 0.02563936449587345
+              },
+              {
+                "left": 0.06885985285043716,
+                "top": 0.7903808951377869,
+                "width": 0.724790096282959,
+                "height": 0.025114357471466064
+              },
+              {
+                "left": 0.06875959038734436,
+                "top": 0.8266969323158264,
+                "width": 0.1462680995464325,
+                "height": 0.024863243103027344
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.06848330050706863,
+                "top": 0.6764479875564575,
+                "width": 0.2078445702791214,
+                "height": 0.02543894201517105
+              },
+              {
+                "left": 0.06904270499944687,
+                "top": 0.7173190116882324,
+                "width": 0.7344545722007751,
+                "height": 0.025548148900270462
+              },
+              {
+                "left": 0.06843791902065277,
+                "top": 0.7537875771522522,
+                "width": 0.7291179299354553,
+                "height": 0.02563936449587345
+              },
+              {
+                "left": 0.06885985285043716,
+                "top": 0.7903808951377869,
+                "width": 0.724790096282959,
+                "height": 0.025114357471466064
+              },
+              {
+                "left": 0.06875959038734436,
+                "top": 0.8266969323158264,
+                "width": 0.1462680995464325,
+                "height": 0.024863243103027344
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 1884,
+          "extractionMs": 1753
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 271
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "missing-warning",
+      "requestMs": 1992,
+      "review": {
+        "id": "7056ff53cb2522e2d093bf64d5de03d8e06a342091f4fd3a2b1a656d7bb49989",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:44.089Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18959179520606995,
+                "top": 0.22666768729686737,
+                "width": 0.6270270347595215,
+                "height": 0.06913859397172928
+              },
+              {
+                "left": 0.2525864243507385,
+                "top": 0.5536633729934692,
+                "width": 0.49615761637687683,
+                "height": 0.025448957458138466
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.3021368980407715,
+                "top": 0.33548295497894287,
+                "width": 0.3976736068725586,
+                "height": 0.03157760575413704
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | (90 Proof)",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | (90 Proof)",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.3562014400959015,
+                "top": 0.43291786313056946,
+                "width": 0.287173867225647,
+                "height": 0.035136763006448746
+              },
+              {
+                "left": 0.3562014400959015,
+                "top": 0.43291786313056946,
+                "width": 0.287173867225647,
+                "height": 0.035136763006448746
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.45691367983818054,
+                "top": 0.48951759934425354,
+                "width": 0.0867958515882492,
+                "height": 0.025929249823093414
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18959179520606995,
+                "top": 0.22666768729686737,
+                "width": 0.6270270347595215,
+                "height": 0.06913859397172928
+              },
+              {
+                "left": 0.2525864243507385,
+                "top": 0.5536633729934692,
+                "width": 0.49615761637687683,
+                "height": 0.025448957458138466
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "Not found",
+            "status": "Not found",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.3424530625343323,
+                "top": 0.08280885964632034,
+                "width": 0.16885510087013245,
+                "height": 0.0187926534563303
+              },
+              {
+                "left": 0.5283142328262329,
+                "top": 0.08301100879907608,
+                "width": 0.1301508992910385,
+                "height": 0.018463782966136932
+              },
+              {
+                "left": 0.18959179520606995,
+                "top": 0.22666768729686737,
+                "width": 0.6270270347595215,
+                "height": 0.06913859397172928
+              },
+              {
+                "left": 0.3021368980407715,
+                "top": 0.33548295497894287,
+                "width": 0.3976736068725586,
+                "height": 0.03157760575413704
+              },
+              {
+                "left": 0.3562014400959015,
+                "top": 0.43291786313056946,
+                "width": 0.287173867225647,
+                "height": 0.035136763006448746
+              },
+              {
+                "left": 0.45691367983818054,
+                "top": 0.48951759934425354,
+                "width": 0.0867958515882492,
+                "height": 0.025929249823093414
+              },
+              {
+                "left": 0.2525864243507385,
+                "top": 0.5536633729934692,
+                "width": 0.49615761637687683,
+                "height": 0.025448957458138466
+              }
+            ],
+            "reason": "No warning was extracted; verify all label panels."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "Not found",
+            "status": "Not found",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.3424530625343323,
+                "top": 0.08280885964632034,
+                "width": 0.16885510087013245,
+                "height": 0.0187926534563303
+              },
+              {
+                "left": 0.5283142328262329,
+                "top": 0.08301100879907608,
+                "width": 0.1301508992910385,
+                "height": 0.018463782966136932
+              },
+              {
+                "left": 0.18959179520606995,
+                "top": 0.22666768729686737,
+                "width": 0.6270270347595215,
+                "height": 0.06913859397172928
+              },
+              {
+                "left": 0.3021368980407715,
+                "top": 0.33548295497894287,
+                "width": 0.3976736068725586,
+                "height": 0.03157760575413704
+              },
+              {
+                "left": 0.3562014400959015,
+                "top": 0.43291786313056946,
+                "width": 0.287173867225647,
+                "height": 0.035136763006448746
+              },
+              {
+                "left": 0.45691367983818054,
+                "top": 0.48951759934425354,
+                "width": 0.0867958515882492,
+                "height": 0.025929249823093414
+              },
+              {
+                "left": 0.2525864243507385,
+                "top": 0.5536633729934692,
+                "width": 0.49615761637687683,
+                "height": 0.025448957458138466
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.3424530625343323,
+                "top": 0.08280885964632034,
+                "width": 0.16885510087013245,
+                "height": 0.0187926534563303
+              },
+              {
+                "left": 0.5283142328262329,
+                "top": 0.08301100879907608,
+                "width": 0.1301508992910385,
+                "height": 0.018463782966136932
+              },
+              {
+                "left": 0.18959179520606995,
+                "top": 0.22666768729686737,
+                "width": 0.6270270347595215,
+                "height": 0.06913859397172928
+              },
+              {
+                "left": 0.3021368980407715,
+                "top": 0.33548295497894287,
+                "width": 0.3976736068725586,
+                "height": 0.03157760575413704
+              },
+              {
+                "left": 0.3562014400959015,
+                "top": 0.43291786313056946,
+                "width": 0.287173867225647,
+                "height": 0.035136763006448746
+              },
+              {
+                "left": 0.45691367983818054,
+                "top": 0.48951759934425354,
+                "width": 0.0867958515882492,
+                "height": 0.025929249823093414
+              },
+              {
+                "left": 0.2525864243507385,
+                "top": 0.5536633729934692,
+                "width": 0.49615761637687683,
+                "height": 0.025448957458138466
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 1902,
+          "extractionMs": 1787
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 223
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "injection",
+      "requestMs": 2220,
+      "review": {
+        "id": "b47fdbf54f9a99da7df0b212e13c4a2ed0cdef3258708daff13505118de65a07",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:46.308Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18930885195732117,
+                "top": 0.2267330437898636,
+                "width": 0.6267623901367188,
+                "height": 0.06880177557468414
+              },
+              {
+                "left": 0.2524779140949249,
+                "top": 0.5536535978317261,
+                "width": 0.4965284466743469,
+                "height": 0.025367675349116325
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.3022399842739105,
+                "top": 0.3355444371700287,
+                "width": 0.39754965901374817,
+                "height": 0.031557757407426834
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.356471449136734,
+                "top": 0.43324795365333557,
+                "width": 0.28661948442459106,
+                "height": 0.03471793234348297
+              },
+              {
+                "left": 0.356471449136734,
+                "top": 0.43324795365333557,
+                "width": 0.28661948442459106,
+                "height": 0.03471793234348297
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.456785649061203,
+                "top": 0.4893485903739929,
+                "width": 0.08725495636463165,
+                "height": 0.02610038034617901
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.18930885195732117,
+                "top": 0.2267330437898636,
+                "width": 0.6267623901367188,
+                "height": 0.06880177557468414
+              },
+              {
+                "left": 0.2524779140949249,
+                "top": 0.5536535978317261,
+                "width": 0.4965284466743469,
+                "height": 0.025367675349116325
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.0685373842716217,
+                "top": 0.6766385436058044,
+                "width": 0.2504853308200836,
+                "height": 0.02011207677423954
+              },
+              {
+                "left": 0.06897860765457153,
+                "top": 0.7173585891723633,
+                "width": 0.7348132133483887,
+                "height": 0.025466447696089745
+              },
+              {
+                "left": 0.06837118417024612,
+                "top": 0.7537074089050293,
+                "width": 0.7296814322471619,
+                "height": 0.02578861452639103
+              },
+              {
+                "left": 0.06885024160146713,
+                "top": 0.7902775406837463,
+                "width": 0.7245285511016846,
+                "height": 0.025303930044174194
+              },
+              {
+                "left": 0.0687147006392479,
+                "top": 0.8267533183097839,
+                "width": 0.14646685123443604,
+                "height": 0.02470334619283676
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.0685373842716217,
+                "top": 0.6766385436058044,
+                "width": 0.2504853308200836,
+                "height": 0.02011207677423954
+              },
+              {
+                "left": 0.06897860765457153,
+                "top": 0.7173585891723633,
+                "width": 0.7348132133483887,
+                "height": 0.025466447696089745
+              },
+              {
+                "left": 0.06837118417024612,
+                "top": 0.7537074089050293,
+                "width": 0.7296814322471619,
+                "height": 0.02578861452639103
+              },
+              {
+                "left": 0.06885024160146713,
+                "top": 0.7902775406837463,
+                "width": 0.7245285511016846,
+                "height": 0.025303930044174194
+              },
+              {
+                "left": 0.0687147006392479,
+                "top": 0.8267533183097839,
+                "width": 0.14646685123443604,
+                "height": 0.02470334619283676
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.0685373842716217,
+                "top": 0.6766385436058044,
+                "width": 0.2504853308200836,
+                "height": 0.02011207677423954
+              },
+              {
+                "left": 0.06897860765457153,
+                "top": 0.7173585891723633,
+                "width": 0.7348132133483887,
+                "height": 0.025466447696089745
+              },
+              {
+                "left": 0.06837118417024612,
+                "top": 0.7537074089050293,
+                "width": 0.7296814322471619,
+                "height": 0.02578861452639103
+              },
+              {
+                "left": 0.06885024160146713,
+                "top": 0.7902775406837463,
+                "width": 0.7245285511016846,
+                "height": 0.025303930044174194
+              },
+              {
+                "left": 0.0687147006392479,
+                "top": 0.8267533183097839,
+                "width": 0.14646685123443604,
+                "height": 0.02470334619283676
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2032,
+          "extractionMs": 1886
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "unseen-brand",
+      "requestMs": 2645,
+      "review": {
+        "id": "bff4479d513d5bf81571cfc1180de8d22e142094bdfcf000f92f8cca112a9d8e",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:48.953Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "ORCHARD CREEK",
+            "normalized": "orchard creek",
+            "status": "Mismatch",
+            "evidence": "ORCHARD CREEK",
+            "reason": "Text differs. No fuzzy entity or class/type equivalence is assumed.",
+            "regions": [
+              {
+                "left": 0.17427602410316467,
+                "top": 0.22923952341079712,
+                "width": 0.6555322408676147,
+                "height": 0.06395813077688217
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.30215132236480713,
+                "top": 0.33550360798835754,
+                "width": 0.3977630138397217,
+                "height": 0.031527891755104065
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.35651078820228577,
+                "top": 0.4331977665424347,
+                "width": 0.28675559163093567,
+                "height": 0.03470738232135773
+              },
+              {
+                "left": 0.35651078820228577,
+                "top": 0.4331977665424347,
+                "width": 0.28675559163093567,
+                "height": 0.03470738232135773
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4568534791469574,
+                "top": 0.48945698142051697,
+                "width": 0.08720511198043823,
+                "height": 0.025931669399142265
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.25240060687065125,
+                "top": 0.55387943983078,
+                "width": 0.49659040570259094,
+                "height": 0.025202518329024315
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.06848369538784027,
+                "top": 0.676639199256897,
+                "width": 0.2505325675010681,
+                "height": 0.02004498988389969
+              },
+              {
+                "left": 0.0689784362912178,
+                "top": 0.7173354029655457,
+                "width": 0.7344799041748047,
+                "height": 0.025653813034296036
+              },
+              {
+                "left": 0.06839121878147125,
+                "top": 0.7536666989326477,
+                "width": 0.7296537756919861,
+                "height": 0.02562258392572403
+              },
+              {
+                "left": 0.06881121546030045,
+                "top": 0.7903050780296326,
+                "width": 0.7244815230369568,
+                "height": 0.02525579184293747
+              },
+              {
+                "left": 0.06870454549789429,
+                "top": 0.8268616795539856,
+                "width": 0.14642617106437683,
+                "height": 0.024716878309845924
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.06848369538784027,
+                "top": 0.676639199256897,
+                "width": 0.2505325675010681,
+                "height": 0.02004498988389969
+              },
+              {
+                "left": 0.0689784362912178,
+                "top": 0.7173354029655457,
+                "width": 0.7344799041748047,
+                "height": 0.025653813034296036
+              },
+              {
+                "left": 0.06839121878147125,
+                "top": 0.7536666989326477,
+                "width": 0.7296537756919861,
+                "height": 0.02562258392572403
+              },
+              {
+                "left": 0.06881121546030045,
+                "top": 0.7903050780296326,
+                "width": 0.7244815230369568,
+                "height": 0.02525579184293747
+              },
+              {
+                "left": 0.06870454549789429,
+                "top": 0.8268616795539856,
+                "width": 0.14642617106437683,
+                "height": 0.024716878309845924
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.06848369538784027,
+                "top": 0.676639199256897,
+                "width": 0.2505325675010681,
+                "height": 0.02004498988389969
+              },
+              {
+                "left": 0.0689784362912178,
+                "top": 0.7173354029655457,
+                "width": 0.7344799041748047,
+                "height": 0.025653813034296036
+              },
+              {
+                "left": 0.06839121878147125,
+                "top": 0.7536666989326477,
+                "width": 0.7296537756919861,
+                "height": 0.02562258392572403
+              },
+              {
+                "left": 0.06881121546030045,
+                "top": 0.7903050780296326,
+                "width": 0.7244815230369568,
+                "height": 0.02525579184293747
+              },
+              {
+                "left": 0.06870454549789429,
+                "top": 0.8268616795539856,
+                "width": 0.14642617106437683,
+                "height": 0.024716878309845924
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2460,
+          "extractionMs": 2308
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 282
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "rotated",
+      "requestMs": 2160,
+      "review": {
+        "id": "af1cc36b1cfcfcb5a80fc62efef5d63d532f97dcbf717b3ccddeb041455eddff",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:51.113Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONES THROW",
+            "normalized": "stones throw",
+            "status": "Needs review",
+            "evidence": "STONES THROW",
+            "reason": "Extraction is uncertain or not corroborated by readable OCR evidence. Inspect the image.",
+            "regions": []
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% ALC./VOL. | 750mL",
+            "normalized": "45% alc./vol. | 750ml",
+            "status": "Needs review",
+            "evidence": "45% ALC./VOL. | 750mL",
+            "reason": "Extraction is uncertain or not corroborated by readable OCR evidence. Inspect the image.",
+            "regions": [
+              {
+                "left": 0.5310338139533997,
+                "top": 0.3564856946468353,
+                "width": 0.03492669388651848,
+                "height": 0.2866877019405365
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750mL",
+            "normalized": "750ml",
+            "status": "Needs review",
+            "evidence": "750mL",
+            "reason": "Extraction is uncertain or not corroborated by readable OCR evidence. Inspect the image.",
+            "regions": []
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.7036014795303345,
+                "top": 0.18961673974990845,
+                "width": 0.0687510222196579,
+                "height": 0.6263173818588257
+              },
+              {
+                "left": 0.4197671115398407,
+                "top": 0.252422571182251,
+                "width": 0.025603000074625015,
+                "height": 0.49627745151519775
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNINGS: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages may impair your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Needs review",
+            "evidence": "GOVERNMENT WARNINGS: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages may impair your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.256089448928833,
+                "top": 0.06891825050115585,
+                "width": 0.02562730573117733,
+                "height": 0.7349972724914551
+              },
+              {
+                "left": 0.21968424320220947,
+                "top": 0.06835827976465225,
+                "width": 0.025688063353300095,
+                "height": 0.7298003435134888
+              },
+              {
+                "left": 0.14748486876487732,
+                "top": 0.06874415278434753,
+                "width": 0.024768764153122902,
+                "height": 0.14649918675422668
+              }
+            ],
+            "reason": "Warning could not be corroborated reliably. A clearer image or manual transcription review is needed."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "Not found",
+            "status": "Not found",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.256089448928833,
+                "top": 0.06891825050115585,
+                "width": 0.02562730573117733,
+                "height": 0.7349972724914551
+              },
+              {
+                "left": 0.21968424320220947,
+                "top": 0.06835827976465225,
+                "width": 0.025688063353300095,
+                "height": 0.7298003435134888
+              },
+              {
+                "left": 0.14748486876487732,
+                "top": 0.06874415278434753,
+                "width": 0.024768764153122902,
+                "height": 0.14649918675422668
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.256089448928833,
+                "top": 0.06891825050115585,
+                "width": 0.02562730573117733,
+                "height": 0.7349972724914551
+              },
+              {
+                "left": 0.21968424320220947,
+                "top": 0.06835827976465225,
+                "width": 0.025688063353300095,
+                "height": 0.7298003435134888
+              },
+              {
+                "left": 0.14748486876487732,
+                "top": 0.06874415278434753,
+                "width": 0.024768764153122902,
+                "height": 0.14649918675422668
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [
+          "FICTIONAL SAMPLE NOT FOR SALE"
+        ],
+        "timing": {
+          "processingMs": 1963,
+          "extractionMs": 1846
+        },
+        "usage": {
+          "inputTokens": 1856,
+          "outputTokens": 287
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "low-resolution",
+      "requestMs": 2080,
+      "review": {
+        "id": "b4266d8ad1cd22a0ce48ccfa0a020395824eb2eba0b89f21f86bdc350560f3f8",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:53.194Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.1879030168056488,
+                "top": 0.22641929984092712,
+                "width": 0.6325224041938782,
+                "height": 0.07352520525455475
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.35662153363227844,
+                "top": 0.4320826232433319,
+                "width": 0.291214257478714,
+                "height": 0.03920615464448929
+              },
+              {
+                "left": 0.35662153363227844,
+                "top": 0.4320826232433319,
+                "width": 0.291214257478714,
+                "height": 0.03920615464448929
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4562259316444397,
+                "top": 0.48695454001426697,
+                "width": 0.09090596437454224,
+                "height": 0.03421863913536072
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Needs review",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Extraction is uncertain or not corroborated by readable OCR evidence. Inspect the image.",
+            "regions": [
+              {
+                "left": 0.1879030168056488,
+                "top": 0.22641929984092712,
+                "width": 0.6325224041938782,
+                "height": 0.07352520525455475
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Needs review",
+            "evidence": "(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [],
+            "reason": "Warning could not be corroborated reliably. A clearer image or manual transcription review is needed."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "Not found",
+            "status": "Not found",
+            "evidence": "",
+            "regions": [],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2000,
+          "extractionMs": 1932
+        },
+        "usage": {
+          "inputTokens": 724,
+          "outputTokens": 267
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "glare",
+      "requestMs": 2328,
+      "review": {
+        "id": "aeb736714a49b3d9fde583f1a6194711e26e2f077a198b742c771a0bcb5b3c23",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:55.523Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "Stone's Throw",
+            "observed": "STONE'S THROW",
+            "normalized": "stone's throw",
+            "status": "Match",
+            "evidence": "STONE'S THROW",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.1892150193452835,
+                "top": 0.22660434246063232,
+                "width": 0.6265993714332581,
+                "height": 0.06924164295196533
+              },
+              {
+                "left": 0.2523800730705261,
+                "top": 0.5539083480834961,
+                "width": 0.4960877299308777,
+                "height": 0.02494696155190468
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Kentucky Straight Bourbon Whiskey",
+            "observed": "Kentucky Straight Bourbon Whiskey",
+            "normalized": "kentucky straight bourbon whiskey",
+            "status": "Match",
+            "evidence": "Kentucky Straight Bourbon Whiskey",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.3021097183227539,
+                "top": 0.3354630470275879,
+                "width": 0.39790892601013184,
+                "height": 0.03155218064785004
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "45% Alc./Vol. (90 Proof)",
+            "observed": "45% Alc./Vol. | 90 Proof",
+            "normalized": "45% ABV",
+            "status": "Match",
+            "evidence": "45% Alc./Vol. | 90 Proof",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.35641831159591675,
+                "top": 0.4331866204738617,
+                "width": 0.2868698537349701,
+                "height": 0.03466794267296791
+              },
+              {
+                "left": 0.35641831159591675,
+                "top": 0.4331866204738617,
+                "width": 0.2868698537349701,
+                "height": 0.03466794267296791
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 ml",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 ml",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.4567176401615143,
+                "top": 0.48931312561035156,
+                "width": 0.08431325852870941,
+                "height": 0.02536567486822605
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Stone’s Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "observed": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "normalized": "stone's throw distillery, 12 orchard lane, frankfort, ky",
+            "status": "Match",
+            "evidence": "Stone's Throw Distillery, 12 Orchard Lane, Frankfort, KY",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.1892150193452835,
+                "top": 0.22660434246063232,
+                "width": 0.6265993714332581,
+                "height": 0.06924164295196533
+              },
+              {
+                "left": 0.2523800730705261,
+                "top": 0.5539083480834961,
+                "width": 0.4960877299308777,
+                "height": 0.02494696155190468
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.06830509752035141,
+                "top": 0.6764792203903198,
+                "width": 0.2507970929145813,
+                "height": 0.020190168172121048
+              },
+              {
+                "left": 0.06897609680891037,
+                "top": 0.7171950340270996,
+                "width": 0.733994722366333,
+                "height": 0.025754431262612343
+              },
+              {
+                "left": 0.06843336671590805,
+                "top": 0.7537969350814819,
+                "width": 0.728683590888977,
+                "height": 0.02546088583767414
+              },
+              {
+                "left": 0.06889579445123672,
+                "top": 0.7904265522956848,
+                "width": 0.7238751649856567,
+                "height": 0.025087488815188408
+              },
+              {
+                "left": 0.06874564290046692,
+                "top": 0.8268219828605652,
+                "width": 0.14614416658878326,
+                "height": 0.02467302419245243
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.06830509752035141,
+                "top": 0.6764792203903198,
+                "width": 0.2507970929145813,
+                "height": 0.020190168172121048
+              },
+              {
+                "left": 0.06897609680891037,
+                "top": 0.7171950340270996,
+                "width": 0.733994722366333,
+                "height": 0.025754431262612343
+              },
+              {
+                "left": 0.06843336671590805,
+                "top": 0.7537969350814819,
+                "width": 0.728683590888977,
+                "height": 0.02546088583767414
+              },
+              {
+                "left": 0.06889579445123672,
+                "top": 0.7904265522956848,
+                "width": 0.7238751649856567,
+                "height": 0.025087488815188408
+              },
+              {
+                "left": 0.06874564290046692,
+                "top": 0.8268219828605652,
+                "width": 0.14614416658878326,
+                "height": 0.02467302419245243
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.06830509752035141,
+                "top": 0.6764792203903198,
+                "width": 0.2507970929145813,
+                "height": 0.020190168172121048
+              },
+              {
+                "left": 0.06897609680891037,
+                "top": 0.7171950340270996,
+                "width": 0.733994722366333,
+                "height": 0.025754431262612343
+              },
+              {
+                "left": 0.06843336671590805,
+                "top": 0.7537969350814819,
+                "width": 0.728683590888977,
+                "height": 0.02546088583767414
+              },
+              {
+                "left": 0.06889579445123672,
+                "top": 0.7904265522956848,
+                "width": 0.7238751649856567,
+                "height": 0.025087488815188408
+              },
+              {
+                "left": 0.06874564290046692,
+                "top": 0.8268219828605652,
+                "width": 0.14614416658878326,
+                "height": 0.02467302419245243
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2228,
+          "extractionMs": 2066
+        },
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 283
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "imported-wine",
+      "requestMs": 2107,
+      "review": {
+        "id": "380bc5f36da3811865714d07217edcb27b9925172017ae8403d59776d51600c6",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:57.629Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "RIVIÈRE",
+            "observed": "RIVIÈRE",
+            "normalized": "rivière",
+            "status": "Match",
+            "evidence": "RIVIÈRE",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10180868208408356,
+                "top": 0.1616031527519226,
+                "width": 0.42789632081985474,
+                "height": 0.05719903111457825
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Chardonnay",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "12.5% Alc./Vol.",
+            "observed": "12.5% Alc./Vol.",
+            "normalized": "12.5% ABV",
+            "status": "Match",
+            "evidence": "12.5% Alc./Vol.",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10401491820812225,
+                "top": 0.37643060088157654,
+                "width": 0.2469913512468338,
+                "height": 0.021579299122095108
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10142746567726135,
+                "top": 0.43054506182670593,
+                "width": 0.12509165704250336,
+                "height": 0.02099647745490074
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "observed": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "normalized": "domaine riviere, 8 rue des vignes, chablis",
+            "status": "Match",
+            "evidence": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10156861692667007,
+                "top": 0.49863961338996887,
+                "width": 0.5703713297843933,
+                "height": 0.02091575227677822
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "France",
+            "observed": "Product of France",
+            "normalized": "product of france",
+            "status": "Mismatch",
+            "evidence": "Product of France",
+            "reason": "Text differs. No fuzzy entity or class/type equivalence is assumed.",
+            "regions": [
+              {
+                "left": 0.10180935263633728,
+                "top": 0.5757523775100708,
+                "width": 0.25273698568344116,
+                "height": 0.01832803152501583
+              }
+            ]
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Mismatch",
+            "evidence": "(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.10147877037525177,
+                "top": 0.6931927800178528,
+                "width": 0.6562963128089905,
+                "height": 0.018801933154463768
+              },
+              {
+                "left": 0.1007561981678009,
+                "top": 0.7219551801681519,
+                "width": 0.637209415435791,
+                "height": 0.018694069236516953
+              },
+              {
+                "left": 0.1003495454788208,
+                "top": 0.7503381371498108,
+                "width": 0.6060290932655334,
+                "height": 0.018778609111905098
+              },
+              {
+                "left": 0.10108708590269089,
+                "top": 0.778905987739563,
+                "width": 0.6261509656906128,
+                "height": 0.019002187997102737
+              },
+              {
+                "left": 0.10107675939798355,
+                "top": 0.8076333999633789,
+                "width": 0.5063754916191101,
+                "height": 0.01841084472835064
+              }
+            ],
+            "reason": "Warning differs from required wording, punctuation or capitalization."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "Not found",
+            "status": "Not found",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.10147877037525177,
+                "top": 0.6931927800178528,
+                "width": 0.6562963128089905,
+                "height": 0.018801933154463768
+              },
+              {
+                "left": 0.1007561981678009,
+                "top": 0.7219551801681519,
+                "width": 0.637209415435791,
+                "height": 0.018694069236516953
+              },
+              {
+                "left": 0.1003495454788208,
+                "top": 0.7503381371498108,
+                "width": 0.6060290932655334,
+                "height": 0.018778609111905098
+              },
+              {
+                "left": 0.10108708590269089,
+                "top": 0.778905987739563,
+                "width": 0.6261509656906128,
+                "height": 0.019002187997102737
+              },
+              {
+                "left": 0.10107675939798355,
+                "top": 0.8076333999633789,
+                "width": 0.5063754916191101,
+                "height": 0.01841084472835064
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.10147877037525177,
+                "top": 0.6931927800178528,
+                "width": 0.6562963128089905,
+                "height": 0.018801933154463768
+              },
+              {
+                "left": 0.1007561981678009,
+                "top": 0.7219551801681519,
+                "width": 0.637209415435791,
+                "height": 0.018694069236516953
+              },
+              {
+                "left": 0.1003495454788208,
+                "top": 0.7503381371498108,
+                "width": 0.6060290932655334,
+                "height": 0.018778609111905098
+              },
+              {
+                "left": 0.10108708590269089,
+                "top": 0.778905987739563,
+                "width": 0.6261509656906128,
+                "height": 0.019002187997102737
+              },
+              {
+                "left": 0.10107675939798355,
+                "top": 0.8076333999633789,
+                "width": 0.5063754916191101,
+                "height": 0.01841084472835064
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 2015,
+          "extractionMs": 1873
+        },
+        "usage": {
+          "inputTokens": 1988,
+          "outputTokens": 269
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "import-origin-omitted",
+      "requestMs": 1967,
+      "review": {
+        "id": "f205653b54c91208311477c6ef2f4d64936dd3b46f5da6cdde12a0c91c08d4e2",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:16:59.596Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "RIVIÈRE",
+            "observed": "RIVIÈRE",
+            "normalized": "rivière",
+            "status": "Match",
+            "evidence": "RIVIÈRE",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10181888937950134,
+                "top": 0.1613217294216156,
+                "width": 0.42806968092918396,
+                "height": 0.05774557217955589
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "Chardonnay",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "12.5% Alc./Vol.",
+            "observed": "12.5% Alc./Vol.",
+            "normalized": "12.5% ABV",
+            "status": "Match",
+            "evidence": "12.5% Alc./Vol.",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10387039184570312,
+                "top": 0.37633880972862244,
+                "width": 0.24739770591259003,
+                "height": 0.02163298986852169
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "750 mL",
+            "observed": "750 mL",
+            "normalized": "750 mL",
+            "status": "Match",
+            "evidence": "750 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10146703571081161,
+                "top": 0.43058475852012634,
+                "width": 0.1251603364944458,
+                "height": 0.020738307386636734
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "observed": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "normalized": "domaine riviere, 8 rue des vignes, chablis",
+            "status": "Match",
+            "evidence": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10158713907003403,
+                "top": 0.4986034631729126,
+                "width": 0.5703018307685852,
+                "height": 0.020967945456504822
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "France",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not found",
+            "evidence": "",
+            "reason": "No value was extracted. Confirm the complete label was supplied.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.1013394296169281,
+                "top": 0.6563576459884644,
+                "width": 0.35062655806541443,
+                "height": 0.01609666272997856
+              },
+              {
+                "left": 0.10147931426763535,
+                "top": 0.6931968927383423,
+                "width": 0.6560643315315247,
+                "height": 0.018711593002080917
+              },
+              {
+                "left": 0.1007639467716217,
+                "top": 0.7219757437705994,
+                "width": 0.6374784111976624,
+                "height": 0.018789442256093025
+              },
+              {
+                "left": 0.10028497129678726,
+                "top": 0.7503277063369751,
+                "width": 0.6060581803321838,
+                "height": 0.01866244152188301
+              },
+              {
+                "left": 0.10107511281967163,
+                "top": 0.7788589000701904,
+                "width": 0.6261094212532043,
+                "height": 0.018901415169239044
+              },
+              {
+                "left": 0.10105707496404648,
+                "top": 0.807640790939331,
+                "width": 0.5064342021942139,
+                "height": 0.018446173518896103
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.1013394296169281,
+                "top": 0.6563576459884644,
+                "width": 0.35062655806541443,
+                "height": 0.01609666272997856
+              },
+              {
+                "left": 0.10147931426763535,
+                "top": 0.6931968927383423,
+                "width": 0.6560643315315247,
+                "height": 0.018711593002080917
+              },
+              {
+                "left": 0.1007639467716217,
+                "top": 0.7219757437705994,
+                "width": 0.6374784111976624,
+                "height": 0.018789442256093025
+              },
+              {
+                "left": 0.10028497129678726,
+                "top": 0.7503277063369751,
+                "width": 0.6060581803321838,
+                "height": 0.01866244152188301
+              },
+              {
+                "left": 0.10107511281967163,
+                "top": 0.7788589000701904,
+                "width": 0.6261094212532043,
+                "height": 0.018901415169239044
+              },
+              {
+                "left": 0.10105707496404648,
+                "top": 0.807640790939331,
+                "width": 0.5064342021942139,
+                "height": 0.018446173518896103
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.1013394296169281,
+                "top": 0.6563576459884644,
+                "width": 0.35062655806541443,
+                "height": 0.01609666272997856
+              },
+              {
+                "left": 0.10147931426763535,
+                "top": 0.6931968927383423,
+                "width": 0.6560643315315247,
+                "height": 0.018711593002080917
+              },
+              {
+                "left": 0.1007639467716217,
+                "top": 0.7219757437705994,
+                "width": 0.6374784111976624,
+                "height": 0.018789442256093025
+              },
+              {
+                "left": 0.10028497129678726,
+                "top": 0.7503277063369751,
+                "width": 0.6060581803321838,
+                "height": 0.01866244152188301
+              },
+              {
+                "left": 0.10107511281967163,
+                "top": 0.7788589000701904,
+                "width": 0.6261094212532043,
+                "height": 0.018901415169239044
+              },
+              {
+                "left": 0.10105707496404648,
+                "top": 0.807640790939331,
+                "width": 0.5064342021942139,
+                "height": 0.018446173518896103
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 1877,
+          "extractionMs": 1760
+        },
+        "usage": {
+          "inputTokens": 1988,
+          "outputTokens": 268
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    },
+    {
+      "name": "beer-portrait",
+      "requestMs": 2008,
+      "review": {
+        "id": "5345967662551ee492c98b0925f3976b1534862a0c91417ed7c509a4fedd19fb",
+        "mode": "live",
+        "version": "2026-09-20.1",
+        "createdAt": "2026-09-20T21:17:01.602Z",
+        "findings": [
+          {
+            "field": "brand",
+            "label": "Brand name",
+            "expected": "NORTH PIER",
+            "observed": "NORTH PIER",
+            "normalized": "north pier",
+            "status": "Match",
+            "evidence": "NORTH PIER",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10575670748949051,
+                "top": 0.16992712020874023,
+                "width": 0.5612313747406006,
+                "height": 0.04992940276861191
+              },
+              {
+                "left": 0.1016632467508316,
+                "top": 0.4988425076007843,
+                "width": 0.6475799679756165,
+                "height": 0.02068721316754818
+              }
+            ]
+          },
+          {
+            "field": "classType",
+            "label": "Class / type",
+            "expected": "India Pale Ale",
+            "observed": "India Pale Ale",
+            "normalized": "india pale ale",
+            "status": "Match",
+            "evidence": "India Pale Ale",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10371442884206772,
+                "top": 0.2538706362247467,
+                "width": 0.2836124002933502,
+                "height": 0.026122501119971275
+              }
+            ]
+          },
+          {
+            "field": "alcohol",
+            "label": "Alcohol content",
+            "expected": "6.2% ABV",
+            "observed": "6.2% ABV",
+            "normalized": "6.2% ABV",
+            "status": "Match",
+            "evidence": "6.2% ABV",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10076930373907089,
+                "top": 0.3760664165019989,
+                "width": 0.17127810418605804,
+                "height": 0.02198551408946514
+              }
+            ]
+          },
+          {
+            "field": "netContents",
+            "label": "Net contents",
+            "expected": "355 mL",
+            "observed": "355 mL",
+            "normalized": "355 mL",
+            "status": "Match",
+            "evidence": "355 mL",
+            "reason": "Numeric values agree after unit normalization.",
+            "regions": [
+              {
+                "left": 0.10150116682052612,
+                "top": 0.43020033836364746,
+                "width": 0.12511548399925232,
+                "height": 0.021137569099664688
+              }
+            ]
+          },
+          {
+            "field": "producer",
+            "label": "Producer / bottler and address",
+            "expected": "North Pier Brewing, 24 Harbor Road, Portland, ME",
+            "observed": "North Pier Brewing, 24 Harbor Road, Portland, ME",
+            "normalized": "north pier brewing, 24 harbor road, portland, me",
+            "status": "Match",
+            "evidence": "North Pier Brewing, 24 Harbor Road, Portland, ME",
+            "reason": "Text agrees after Unicode, case, apostrophe and whitespace normalization.",
+            "regions": [
+              {
+                "left": 0.10575670748949051,
+                "top": 0.16992712020874023,
+                "width": 0.5612313747406006,
+                "height": 0.04992940276861191
+              },
+              {
+                "left": 0.1016632467508316,
+                "top": 0.4988425076007843,
+                "width": 0.6475799679756165,
+                "height": 0.02068721316754818
+              }
+            ]
+          },
+          {
+            "field": "origin",
+            "label": "Country of origin",
+            "expected": "Not supplied",
+            "observed": "Not found",
+            "normalized": "",
+            "status": "Not applicable",
+            "evidence": "",
+            "reason": "Application identifies a domestic product; import-origin comparison is not applicable.",
+            "regions": []
+          },
+          {
+            "field": "warning",
+            "label": "Warning wording",
+            "expected": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "observed": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.",
+            "regions": [
+              {
+                "left": 0.10099830478429794,
+                "top": 0.6564847826957703,
+                "width": 0.3508826494216919,
+                "height": 0.015935927629470825
+              },
+              {
+                "left": 0.1013818308711052,
+                "top": 0.6931560039520264,
+                "width": 0.6557047963142395,
+                "height": 0.01878010295331478
+              },
+              {
+                "left": 0.10061919689178467,
+                "top": 0.7219293117523193,
+                "width": 0.6371646523475647,
+                "height": 0.018982993438839912
+              },
+              {
+                "left": 0.10026238113641739,
+                "top": 0.7501936554908752,
+                "width": 0.6060441136360168,
+                "height": 0.01888255588710308
+              },
+              {
+                "left": 0.10095591843128204,
+                "top": 0.7788254022598267,
+                "width": 0.6261094212532043,
+                "height": 0.019137799739837646
+              },
+              {
+                "left": 0.10106894373893738,
+                "top": 0.8074236512184143,
+                "width": 0.5061003565788269,
+                "height": 0.01881754957139492
+              }
+            ],
+            "reason": "Required wording agrees exactly, ignoring line breaks and whitespace only."
+          },
+          {
+            "field": "heading",
+            "label": "Warning heading case",
+            "expected": "GOVERNMENT WARNING:",
+            "observed": "GOVERNMENT WARNING:",
+            "status": "Match",
+            "evidence": "GOVERNMENT WARNING:",
+            "regions": [
+              {
+                "left": 0.10099830478429794,
+                "top": 0.6564847826957703,
+                "width": 0.3508826494216919,
+                "height": 0.015935927629470825
+              },
+              {
+                "left": 0.1013818308711052,
+                "top": 0.6931560039520264,
+                "width": 0.6557047963142395,
+                "height": 0.01878010295331478
+              },
+              {
+                "left": 0.10061919689178467,
+                "top": 0.7219293117523193,
+                "width": 0.6371646523475647,
+                "height": 0.018982993438839912
+              },
+              {
+                "left": 0.10026238113641739,
+                "top": 0.7501936554908752,
+                "width": 0.6060441136360168,
+                "height": 0.01888255588710308
+              },
+              {
+                "left": 0.10095591843128204,
+                "top": 0.7788254022598267,
+                "width": 0.6261094212532043,
+                "height": 0.019137799739837646
+              },
+              {
+                "left": 0.10106894373893738,
+                "top": 0.8074236512184143,
+                "width": 0.5061003565788269,
+                "height": 0.01881754957139492
+              }
+            ],
+            "reason": "Heading is checked before case normalization; OCR must corroborate its actual capitalization."
+          },
+          {
+            "field": "formatting",
+            "label": "Warning formatting",
+            "expected": "Bold heading; non-bold body; required size, contrast and separation",
+            "observed": "Manual inspection required",
+            "status": "Needs review",
+            "evidence": "",
+            "regions": [
+              {
+                "left": 0.10099830478429794,
+                "top": 0.6564847826957703,
+                "width": 0.3508826494216919,
+                "height": 0.015935927629470825
+              },
+              {
+                "left": 0.1013818308711052,
+                "top": 0.6931560039520264,
+                "width": 0.6557047963142395,
+                "height": 0.01878010295331478
+              },
+              {
+                "left": 0.10061919689178467,
+                "top": 0.7219293117523193,
+                "width": 0.6371646523475647,
+                "height": 0.018982993438839912
+              },
+              {
+                "left": 0.10026238113641739,
+                "top": 0.7501936554908752,
+                "width": 0.6060441136360168,
+                "height": 0.01888255588710308
+              },
+              {
+                "left": 0.10095591843128204,
+                "top": 0.7788254022598267,
+                "width": 0.6261094212532043,
+                "height": 0.019137799739837646
+              },
+              {
+                "left": 0.10106894373893738,
+                "top": 0.8074236512184143,
+                "width": 0.5061003565788269,
+                "height": 0.01881754957139492
+              }
+            ],
+            "reason": "OCR and model output do not establish font weight or physical print size. Verify heading/body weight, continuous paragraph, size, contrast and placement against the original artwork."
+          }
+        ],
+        "imageConcerns": [],
+        "timing": {
+          "processingMs": 1921,
+          "extractionMs": 1802
+        },
+        "usage": {
+          "inputTokens": 1988,
+          "outputTokens": 265
+        },
+        "model": "amazon.nova-lite-v1:0"
+      }
+    }
+  ]
+}

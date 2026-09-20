@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "imported-wine.png",
+    "expected": {
+      "brand": "RIVIÈRE",
+      "classType": "Chardonnay",
+      "alcohol": "12.5% Alc./Vol.",
+      "netContents": "750 mL",
+      "producer": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+      "origin": "France",
+      "imported": true
+    }
+  },
+  {
+    "filename": "import-origin-omitted.png",
+    "expected": {
+      "brand": "RIVIÈRE",
+      "classType": "Chardonnay",
+      "alcohol": "12.5% Alc./Vol.",
+      "netContents": "750 mL",
+      "producer": "Domaine Riviere, 8 Rue des Vignes, Chablis",
+      "origin": "France",
+      "imported": true
+    }
+  },
+  {
+    "filename": "beer-portrait.png",
+    "expected": {
+      "brand": "NORTH PIER",
+      "classType": "India Pale Ale",
+      "alcohol": "6.2% ABV",
+      "netContents": "355 mL",
+      "producer": "North Pier Brewing, 24 Harbor Road, Portland, ME",
+      "origin": "",
+      "imported": false
+    }
+  }
+]

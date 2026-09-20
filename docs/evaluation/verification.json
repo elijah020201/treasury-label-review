@@ -1,0 +1,95 @@
+{
+  "deployed": {
+    "url": "https://labels.altrosstudios.games",
+    "checkedAt": "2026-09-20T21:37:53.520Z",
+    "checks": [
+      "public narrated video loads and plays at 1080p",
+      "demo desktop/mobile accessibility and overflow",
+      "fresh unauthenticated example",
+      "unauthenticated live processing rejected",
+      "live imported image and application form",
+      "duplicate reuse without new extraction",
+      "changed expectations create a distinct mismatch review",
+      "real batch isolates invalid image and exports complete summary",
+      "actual DynamoDB session limit prevents paid processing atomically",
+      "cross-origin preflight is not allowed",
+      "site bucket denies anonymous direct object access"
+    ],
+    "accessibility": [
+      {
+        "page": "demo",
+        "width": 1440,
+        "violations": []
+      },
+      {
+        "page": "demo",
+        "width": 390,
+        "violations": []
+      },
+      {
+        "page": "live-workbench",
+        "width": 1440,
+        "violations": []
+      },
+      {
+        "page": "live-workbench",
+        "width": 390,
+        "violations": []
+      }
+    ],
+    "pageErrors": [],
+    "media": {
+      "time": 26.37115,
+      "duration": 126.010667,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "release": {
+    "checkedAt": "2026-09-20T21:39:12.754Z",
+    "keyboardNavigation": true,
+    "csvExport": true,
+    "captionCuesLoaded": true,
+    "networkHosts": [
+      "labels.altrosstudios.games"
+    ],
+    "existingSites": [
+      {
+        "url": "https://altrosstudios.games",
+        "status": 200
+      },
+      {
+        "url": "https://aegis.altrosstudios.games",
+        "status": 200
+      }
+    ]
+  },
+  "local": {
+    "accessibility": [
+      {
+        "width": 1440,
+        "violations": []
+      },
+      {
+        "width": 390,
+        "violations": []
+      }
+    ],
+    "sampleRace": "manual file and fields survive delayed sample response"
+  },
+  "sourceAudit": {
+    "checkedAt": "2026-09-20T21:44:00.811Z",
+    "workingFiles": 83,
+    "historyBlobs": 59,
+    "findings": [],
+    "scope": "Known reviewer secret and common AWS/GitHub/private-key/Slack token patterns; file inventory inspected separately. This is not a proof that every possible secret pattern is absent."
+  },
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}
